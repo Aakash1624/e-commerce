@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --clr-emerald: #10bd5e;
+  --clr-light-green: #b6f099;
+  --clr-dark-red: #cc1006;
+  --clr-amber: #ffbe0bff;
+  --clr-rose: #ff006eff;
+  --clr-blue-violet: #8338ecff;
+  --clr-azure: #3a86ffff;
+  --clr-orange: #fb5607ff;
+  --clr-folly: #ff0054ff;
+  --clr-melon: #ffa69eff;
+  --clr-lite-gray: #e9ecefff;
+  --clr-dark-gray: #595959ff;
+  --clr-dark-shadow: 0 30px 38px rgba(0, 0, 0, 0.302),
+    0 15px 10px rgba(0, 0, 0, 0.22);
+  --clr-light-shadow: 0 0px 0px rgba(0, 0, 0, 0.19),
+    0 0px 0px rgba(0, 0, 0, 0.23);
+}
+li {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  /* width: 92px;
+  height: 92px; */
+  align-items: center;
+}
+
+.nav-container {
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: var(--clr-light-shadow);
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
+  height: 3rem;
+  border: none;
+  /* border-bottom: 1px solid gray; */
+  /* background-color: rgba(153, 213, 226, 0.364); */
+  border-radius: 8px;
+  outline: none;
+  /* gap: 20px; */
+}
+
+.search {
+  width: 40vw;
+  height: 2.5rem;
+  border: none;
+  /* border-bottom: 1px solid gray; */
+  background-color: #a3c0c65d;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  outline: none;
+  border: none;
+}
+
+.search-icons {
+  width: 1.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: #a3c0c65d;
+}
+
+.profile {
+  position: absolute;
+  top: 6px;
+  right: 135px;
+  font-size: 38px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart {
+  font-size: 32px;
+}
+
+.nav-menu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 110px;
+}
+
+.nav-menu-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+}
+
+.nav-menu-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.btn-login {
+  width: 130px;
+  padding: 1rem;
+  border-radius: 75px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  justify-content: space-around;
+}

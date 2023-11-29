@@ -1,0 +1,40 @@
+.main {
+  width: 20rem;
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+.item {
+  width: 20rem;
+  height: auto;
+  justify-content: space-evenly;
+}
+
+.item-price {
+  display: flex;
+  gap: 15px;
+  color: #06cb24;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item:hover {
+  transform: scale(1.04);
+  transition: 0.5s;
+}
+
+.btn-addCart {
+  background-color: rgb(117, 238, 238);
+  color: black;
+  padding: 0.5rem;
+  width: 350px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.btn-addCart:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
