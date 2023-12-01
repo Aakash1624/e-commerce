@@ -2,7 +2,7 @@ const carousel_data = [
   {
     id: 1,
     image:
-      'https://prod-img.thesouledstore.com/public/theSoul/uploads/themes/6159420231128163053.jpg?format=webp&w=1500&dpr=1.3',
+      'https://prod-img.thesouledstore.com/public/theSoul/uploads/themes/6159420231128163053.jpg?format=webp&w=1500&dpr=1.3',0
   },
   {
     id: 2,

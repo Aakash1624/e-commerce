@@ -1,7 +1,9 @@
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -14,4 +16,27 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const commerceApp = initializeApp(firebaseConfig);
+
+//Authentication
+const commerceAuth = getAuth(commerceApp);
+
+//sigIn with Google
+const googleProvider = new GoogleAuthProvider();
+
+const signInWithGooglePopup = () =>
+  signInWithPopup(commerceAuth, googleProvider);
+
+export { signInWithGooglePopup };
+
+//Fire Store DataBase
+
+const commerceDb = getFirestore(commerceApp);
+
+const addData = async (collection,id,value) => {
+  const res = await setDoc(doc(commerceDb, collection, id),value);
+
+  console.log(res);
+};
+
+addData('cities', 'LA', { name: 'Los Angeles', state: 'CA', country: 'USA' });

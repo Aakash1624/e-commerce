@@ -1,7 +1,13 @@
 import './login.css';
 import { FcGoogle } from 'react-icons/fc';
+import { signInWithGooglePopup } from '../../utils/firebase';
+
 
 const Login = () => {
+  const signInWithGoogle = async () => {
+    const { user } = await signInWithGooglePopup();
+    console.log(user);
+  };
   return (
     <div className="main-container">
       <div className="login-container">
@@ -39,7 +45,9 @@ const Login = () => {
               <span className="btn-google">
                 <FcGoogle />
               </span>
-              <button className="btn-sign">Sign In With Google</button>
+              <button onClick={signInWithGoogle} className="btn-sign">
+                Sign In With Google
+              </button>
             </div>
           </div>
         </div>

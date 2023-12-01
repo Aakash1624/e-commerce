@@ -461,7 +461,86 @@ const categories_data = [
       },
     ],
   },
-  
+  {
+    id: 8,
+    name: 'Shorts',
+    image:
+      'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1700750316_3879478.jpg?format=webp&w=480&dpr=1.3',
+    products: [
+      {
+        id: 11,
+        name: 'Short',
+        description:
+          'aliquet bibendum enim facilisis gravida neque convallis a cras',
+        price: '7000',
+        image:
+          'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1699360430_5340006.gif?format=webp&w=300&dpr=1.3',
+      },
+      {
+        id: 12,
+        name: 'Short',
+        description:
+          'aliquet bibendum enim facilisis gravida neque convallis a cras',
+        price: '2800',
+        image:
+          'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1700150317_1316252.jpg?format=webp&w=300&dpr=1.3',
+      },
+      {
+        id: 13,
+        name: 'Short',
+        description:
+          'aliquet bibendum enim facilisis gravida neque convallis a cras',
+        price: 3070,
+        image:
+          'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694670879_6304550.jpg?format=webp&w=300&dpr=1.3',
+      },
+      {
+        id: 14,
+        name: 'Short',
+        description:
+          'aliquet bibendum enim facilisis gravida neque convallis a cras',
+        price: 1800,
+        image:
+          'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694670421_6188493.jpg?format=webp&w=300&dpr=1.3',
+      },
+      {
+        id: 15,
+        name: 'Short',
+        description:
+          'aliquet bibendum enim facilisis gravida neque convallis a cras',
+        price: 1530,
+        image:
+          'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1700150459_8923890.jpg?format=webp&w=300&dpr=1.3',
+      },
+      {
+        id: 16,
+        name: 'Short',
+        description:
+          'aliquet bibendum enim facilisis gravida neque convallis a cras',
+        price: 5470,
+        image:
+          'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1700741515_2633567.jpg?format=webp&w=300&dpr=1.3',
+      },
+      {
+        id: 17,
+        name: 'Short',
+        description:
+          'aliquet bibendum enim facilisis gravida neque convallis a cras',
+        price: 10250,
+        image:
+          'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1699360378_1714577.gif?format=webp&w=300&dpr=1.3',
+      },
+      {
+        id: 18,
+        name: 'Short',
+        description:
+          'aliquet bibendum enim facilisis gravida neque convallis a cras',
+        price: 2050,
+        image:
+          'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695703118_4267700.jpg?format=webp&w=300&dpr=1.3',
+      },
+    ],
+  },
 ];
 
 export default categories_data;

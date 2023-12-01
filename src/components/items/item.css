@@ -1,7 +1,7 @@
 .main {
   width: 20rem;
   height: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .item {
@@ -24,7 +24,7 @@
 }
 
 .btn-addCart {
-  background-color: rgb(117, 238, 238);
+  background-color: #0af0f0;
   color: black;
   padding: 0.5rem;
   width: 350px;
@@ -32,9 +32,15 @@
   border: none;
   outline: none;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .btn-addCart:hover {
-  transform: scale(1.05);
-  transition: 0.5s;
+  transform: scale(1.01);
+  /* transition: 0.7s; */
+  cursor: pointer;
+  background: linear-gradient(80deg, #05ed98, #35b4f4 100%);
+  /* background-color: rgb(117, 238, 163); */
+  transition: ease-out 0.3s;
 }

@@ -2,11 +2,12 @@ import Item from '../items/item';
 import ProductTitle from './productTitle';
 import categories_data from '../../constants/products';
 import './productCart.css';
+// import { FaLongArrowAltRight } from 'react-icons/fa';
 
 const ProductCart = () => {
   return (
     <div className="popular-container">
-      <h1>All Products</h1>
+      <h1 className="popular-title">All Products</h1>
       <hr />
       {categories_data.map((category, id) => {
         return (
@@ -29,6 +30,8 @@ const ProductCart = () => {
                   );
                 })}
             </div>
+            <br />
+            <hr />
           </>
         );
       })}

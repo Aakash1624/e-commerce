@@ -54,13 +54,45 @@
   height: auto;
   overflow: hidden;
   margin-top: 30px;
+  padding-bottom: 2rem;
 }
 
-.image {
+.cat-image {
   width: 350px;
-  height: 450px;
+  height: 440px;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
 }
 
-.cat-image
+.img-title {
+  position: relative;
+}
+
+.title-name {
+  position: absolute;
+  top: 390px;
+  /* left: 5px; */
+  padding: 0.25rem 2rem;
+  color: white;
+  background-color: rgb(19, 19, 19);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-ShopNow {
+  width: 350px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0.5rem;
+  background-color: #0af0f0;
+  outline: none;
+  border: none;
+}
+
+.cat-item:hover {
+  transform: scale(1.04);
+  transition: 0.5s;
+}
