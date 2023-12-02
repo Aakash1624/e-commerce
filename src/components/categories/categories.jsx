@@ -1,11 +1,11 @@
 import categories_data from '../../constants/products';
-import './categories.css';
+import './category.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import CatPreview from './catePreview';
 
-const CategoryCard = () => {
+const CategoryCardHome = () => {
   return (
     <div className="cat-popular-container">
       <div className="cat-product-items">
@@ -25,4 +25,4 @@ const CategoryCard = () => {
     </div>
   );
 };
-export default CategoryCard;
+export default CategoryCardHome;

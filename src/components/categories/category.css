@@ -1,5 +1,6 @@
 .cat-item {
   width: 20rem;
+  cursor: pointer;
 }
 
 .item p {
@@ -82,7 +83,12 @@
   gap: 5px;
 }
 
-.btn-ShopNow {
+.cat-item:hover {
+  transform: scale(1.04);
+  transition: 0.5s;
+}
+
+.button-shop {
   width: 350px;
   font-size: 16px;
   font-weight: 700;
@@ -90,9 +96,5 @@
   background-color: #0af0f0;
   outline: none;
   border: none;
-}
-
-.cat-item:hover {
-  transform: scale(1.04);
-  transition: 0.5s;
+  cursor: pointer;
 }

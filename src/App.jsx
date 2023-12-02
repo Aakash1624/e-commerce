@@ -21,10 +21,10 @@ const App = () => {
           path: '/shop',
           element: <Shop />,
         },
-        {
-          path: '/shop:categoryId',
-          element: <Shop />,
-        },
+        // {
+        //   path: '/shop',
+        //   element: <Shop />,
+        // },
         {
           path: '/contact',
           element: <Contact />,

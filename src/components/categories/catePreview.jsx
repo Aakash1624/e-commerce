@@ -1,14 +1,19 @@
 import Item from '../items/item';
 import categories_data from '../../constants/products';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import './category.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CatPreview = (catProps, id) => {
-  let [filterType, setFilterType] = useState('');
-
   <div className="category-container">
-    return (
+    <div className="preview">
+      {categories_data
+        .filter((product, index) => index < 4)
+        .map((products) => (
+          <Item key={products.id} product={products} />
+        ))}
+    </div>
+    {/* return (
     <Item
       key={id}
       image={catProps.image}
@@ -17,15 +22,20 @@ const CatPreview = (catProps, id) => {
       id={catProps.id}
       price={catProps.price}
     />
-    );
+    ); */}
   </div>;
+  const navigate = useNavigate();
 
+  const navigateHandler = (category) => {
+    navigate(`/shop/${category.toLowerCase()}`);
+  };
   return (
-    <main className="cat-main" key={catProps.id}>
+    <main className="cat-main" key={id}>
       <div
         className="cat-item"
-        value={filterType}
-        onClick={(e) => setFilterType(e.target.value)}
+        onClick={() => {
+          navigateHandler(catProps.names);
+        }}
       >
         <div className="img-title">
           <h3 className="title-name">
@@ -33,20 +43,7 @@ const CatPreview = (catProps, id) => {
           </h3>
           <img src={catProps.image} alt="" className="cat-image" />
         </div>
-        <div className="addCart-container">
-          <button
-            value={catProps.names}
-            className="btn-ShopNow"
-            onClick={() => {
-              categories_data.map((obj) => {
-                console.log(filterType);
-                console.log(obj);
-              });
-            }}
-          >
-            Shop Now
-          </button>
-        </div>
+        <button className="button-shop">Shop Now</button>
       </div>
     </main>
   );

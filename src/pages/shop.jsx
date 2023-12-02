@@ -4,14 +4,16 @@ import React from 'react';
 import ProductCart from '../components/productCart/productCart';
 import './pages.css';
 import { useParams } from 'react-router-dom';
+import CatPreview from '../components/categories/catePreview';
 
 const Shop = () => {
-  const { categoryId } = useParams();
+  // const { categoryId } = useParams();
 
   return (
     <>
       <div className="shop">
         <ProductCart />
+        <CatPreview />
       </div>
     </>
   );

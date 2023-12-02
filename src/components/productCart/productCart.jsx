@@ -1,8 +1,8 @@
 import Item from '../items/item';
-import ProductTitle from './productTitle';
+// import ProductTitle from './productTitle';
 import categories_data from '../../constants/products';
 import './productCart.css';
-// import { FaLongArrowAltRight } from 'react-icons/fa';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 
 // const { categoryId } = useParams();
@@ -11,11 +11,16 @@ const ProductCart = () => {
     <div className="popular-container">
       <h1 className="popular-title">All Products</h1>
       <hr />
-      {categories_data.map((category, id) => {
+      {categories_data.map((category) => {
         return (
           <>
             <div className="product-title-container">
-              <ProductTitle key={id} id={category.id} names={category.names} />
+              <div className="item-title">
+                <h3 className="title">
+                  {category.names}
+                  <FaLongArrowAltRight />
+                </h3>
+              </div>
             </div>
             <div className="product-items">
               {category.products &&
@@ -40,4 +45,4 @@ const ProductCart = () => {
     </div>
   );
 };
-export default { ProductCart };
+export default ProductCart;
