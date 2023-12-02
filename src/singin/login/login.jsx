@@ -1,12 +1,14 @@
 import './login.css';
 import { FcGoogle } from 'react-icons/fc';
-import { signInWithGooglePopup } from '../../utils/firebase';
-
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+} from '../../utils/firebase';
 
 const Login = () => {
   const signInWithGoogle = async () => {
     const { user } = await signInWithGooglePopup();
-    console.log(user);
+   const userDocRef = await createUserDocumentFromAuth(user);
   };
   return (
     <div className="main-container">

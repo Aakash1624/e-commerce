@@ -3,7 +3,7 @@ const ProductTitle = (props) => {
   return (
     <div className="item-title">
       <h3 className="title">
-        {props.name}
+        {props.names}
         <FaLongArrowAltRight />
       </h3>
     </div>

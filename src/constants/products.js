@@ -1,12 +1,12 @@
 const categories_data = [
   {
     id: 1,
-    name: 'Shirts',
+    names: 'Shirts',
     image: './src/assets/souled/CasualShirt_7.webp',
     products: [
       {
         id: 11,
-        name: 'Shirt',
+        names: 'Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -14,7 +14,7 @@ const categories_data = [
       },
       {
         id: 12,
-        name: 'Shirt',
+        names: 'Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -22,7 +22,7 @@ const categories_data = [
       },
       {
         id: 13,
-        name: 'Shirt',
+        names: 'Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -30,7 +30,7 @@ const categories_data = [
       },
       {
         id: 14,
-        name: 'Shirt',
+        names: 'Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -38,7 +38,7 @@ const categories_data = [
       },
       {
         id: 15,
-        name: 'Shirt',
+        names: 'Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -46,7 +46,7 @@ const categories_data = [
       },
       {
         id: 16,
-        name: 'Shirt',
+        names: 'Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -54,7 +54,7 @@ const categories_data = [
       },
       {
         id: 17,
-        name: 'Shirt',
+        names: 'Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -62,7 +62,7 @@ const categories_data = [
       },
       {
         id: 18,
-        name: 'Shirt',
+        names: 'Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -72,12 +72,12 @@ const categories_data = [
   },
   {
     id: 2,
-    name: 'T-Shirts',
+    names: 'T-Shirts',
     image: './src/assets/souled/T-shirt_7.webp',
     products: [
       {
         id: 11,
-        name: 'T-Shirt',
+        names: 'T-Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -85,7 +85,7 @@ const categories_data = [
       },
       {
         id: 12,
-        name: 'T-Shirt',
+        names: 'T-Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -93,7 +93,7 @@ const categories_data = [
       },
       {
         id: 13,
-        name: 'T-Shirt',
+        names: 'T-Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -101,7 +101,7 @@ const categories_data = [
       },
       {
         id: 14,
-        name: 'T-Shirt',
+        names: 'T-Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -109,7 +109,7 @@ const categories_data = [
       },
       {
         id: 15,
-        name: 'T-Shirt',
+        names: 'T-Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -117,7 +117,7 @@ const categories_data = [
       },
       {
         id: 16,
-        name: 'T-Shirt',
+        names: 'T-Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -125,7 +125,7 @@ const categories_data = [
       },
       {
         id: 17,
-        name: 'T-Shirt',
+        names: 'T-Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -133,7 +133,7 @@ const categories_data = [
       },
       {
         id: 18,
-        name: 'T-Shirt',
+        names: 'T-Shirt',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -143,12 +143,12 @@ const categories_data = [
   },
   {
     id: 3,
-    name: 'Jeans',
+    names: 'Jeans',
     image: './src/assets/souled/Jean_1.webp',
     products: [
       {
         id: 11,
-        name: 'T-Shirt',
+        names: 'Jeans Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -156,7 +156,7 @@ const categories_data = [
       },
       {
         id: 12,
-        name: 'T-Shirt',
+        names: 'Jeans Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -164,7 +164,7 @@ const categories_data = [
       },
       {
         id: 13,
-        name: 'T-Shirt',
+        names: 'Jeans Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -172,7 +172,7 @@ const categories_data = [
       },
       {
         id: 14,
-        name: 'T-Shirt',
+        names: 'Jeans Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -180,7 +180,7 @@ const categories_data = [
       },
       {
         id: 15,
-        name: 'T-Shirt',
+        names: 'Jeans Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -188,7 +188,7 @@ const categories_data = [
       },
       {
         id: 16,
-        name: 'T-Shirt',
+        names: 'Jeans Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -196,7 +196,7 @@ const categories_data = [
       },
       {
         id: 17,
-        name: 'T-Shirt',
+        names: 'Jeans Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -204,7 +204,7 @@ const categories_data = [
       },
       {
         id: 18,
-        name: 'T-Shirt',
+        names: 'Jeans Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -214,13 +214,13 @@ const categories_data = [
   },
   {
     id: 4,
-    name: 'Cotton Pants',
+    names: 'Cotton Pants',
     image:
       'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1701149136_7792111.jpg?format=webp&w=300&dpr=1.3',
     products: [
       {
         id: 11,
-        name: 'Cotton Pant',
+        names: 'Cotton Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -229,7 +229,7 @@ const categories_data = [
       },
       {
         id: 12,
-        name: 'Cotton Pant',
+        names: 'Cotton Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -238,7 +238,7 @@ const categories_data = [
       },
       {
         id: 13,
-        name: 'Cotton Pant',
+        names: 'Cotton Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -247,7 +247,7 @@ const categories_data = [
       },
       {
         id: 14,
-        name: 'Cotton Pant',
+        names: 'Cotton Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -256,7 +256,7 @@ const categories_data = [
       },
       {
         id: 15,
-        name: 'Cotton Pant',
+        names: 'Cotton Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -265,7 +265,7 @@ const categories_data = [
       },
       {
         id: 16,
-        name: 'Cotton Pant',
+        names: 'Cotton Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -274,7 +274,7 @@ const categories_data = [
       },
       {
         id: 17,
-        name: 'Cotton Pant',
+        names: 'Cotton Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -283,7 +283,7 @@ const categories_data = [
       },
       {
         id: 18,
-        name: 'Cotton Pant',
+        names: 'Cotton Pant',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
@@ -294,13 +294,13 @@ const categories_data = [
   },
   {
     id: 5,
-    name: 'Sneakers',
+    names: 'Sneakers',
     image:
       'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695453136_4677931.jpg?format=webp&w=480&dpr=1.3',
     products: [
       {
         id: 11,
-        name: 'Shoes',
+        names: 'Shoes',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '7000',
@@ -309,7 +309,7 @@ const categories_data = [
       },
       {
         id: 12,
-        name: 'Shoes',
+        names: 'Shoes',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '2800',
@@ -318,7 +318,7 @@ const categories_data = [
       },
       {
         id: 13,
-        name: 'Shoes',
+        names: 'Shoes',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 3070,
@@ -327,7 +327,7 @@ const categories_data = [
       },
       {
         id: 14,
-        name: 'Shoes',
+        names: 'Shoes',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 1800,
@@ -336,7 +336,7 @@ const categories_data = [
       },
       {
         id: 15,
-        name: 'Shoes',
+        names: 'Shoes',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 1530,
@@ -345,7 +345,7 @@ const categories_data = [
       },
       {
         id: 16,
-        name: 'Shoes',
+        names: 'Shoes',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 5470,
@@ -354,7 +354,7 @@ const categories_data = [
       },
       {
         id: 17,
-        name: 'Shoes',
+        names: 'Shoes',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 10250,
@@ -363,7 +363,7 @@ const categories_data = [
       },
       {
         id: 18,
-        name: 'Shoes',
+        names: 'Shoes',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 2050,
@@ -375,13 +375,13 @@ const categories_data = [
 
   {
     id: 6,
-    name: 'Caps',
+    names: 'Caps',
     image:
       'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1684594225_7442612.jpg?format=webp&w=480&dpr=1.3',
     products: [
       {
         id: 11,
-        name: 'Caps',
+        names: 'Caps',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '7000',
@@ -390,7 +390,7 @@ const categories_data = [
       },
       {
         id: 12,
-        name: 'Caps',
+        names: 'Caps',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '2800',
@@ -399,7 +399,7 @@ const categories_data = [
       },
       {
         id: 13,
-        name: 'Caps',
+        names: 'Caps',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 3070,
@@ -408,7 +408,7 @@ const categories_data = [
       },
       {
         id: 14,
-        name: 'Caps',
+        names: 'Caps',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 1800,
@@ -419,13 +419,13 @@ const categories_data = [
   },
   {
     id: 7,
-    name: 'BackPacks',
+    names: 'BackPacks',
     image:
       'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1691226169_6360487.jpg?format=webp&w=480&dpr=1.3',
     products: [
       {
         id: 11,
-        name: 'Bag',
+        names: 'Bag',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '7000',
@@ -434,7 +434,7 @@ const categories_data = [
       },
       {
         id: 12,
-        name: 'Bag',
+        names: 'Bag',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '2800',
@@ -443,7 +443,7 @@ const categories_data = [
       },
       {
         id: 13,
-        name: 'Bag',
+        names: 'Bag',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 3070,
@@ -452,7 +452,7 @@ const categories_data = [
       },
       {
         id: 14,
-        name: 'Bag',
+        names: 'Bag',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 1800,
@@ -463,13 +463,13 @@ const categories_data = [
   },
   {
     id: 8,
-    name: 'Shorts',
+    names: 'Shorts',
     image:
       'https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1700750316_3879478.jpg?format=webp&w=480&dpr=1.3',
     products: [
       {
         id: 11,
-        name: 'Short',
+        names: 'Short',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '7000',
@@ -478,7 +478,7 @@ const categories_data = [
       },
       {
         id: 12,
-        name: 'Short',
+        names: 'Short',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '2800',
@@ -487,7 +487,7 @@ const categories_data = [
       },
       {
         id: 13,
-        name: 'Short',
+        names: 'Short',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 3070,
@@ -496,7 +496,7 @@ const categories_data = [
       },
       {
         id: 14,
-        name: 'Short',
+        names: 'Short',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 1800,
@@ -505,7 +505,7 @@ const categories_data = [
       },
       {
         id: 15,
-        name: 'Short',
+        names: 'Short',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 1530,
@@ -514,7 +514,7 @@ const categories_data = [
       },
       {
         id: 16,
-        name: 'Short',
+        names: 'Short',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 5470,
@@ -523,7 +523,7 @@ const categories_data = [
       },
       {
         id: 17,
-        name: 'Short',
+        names: 'Short',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 10250,
@@ -532,7 +532,7 @@ const categories_data = [
       },
       {
         id: 18,
-        name: 'Short',
+        names: 'Short',
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: 2050,

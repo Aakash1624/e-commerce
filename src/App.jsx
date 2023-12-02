@@ -22,6 +22,10 @@ const App = () => {
           element: <Shop />,
         },
         {
+          path: '/shop:categoryId',
+          element: <Shop />,
+        },
+        {
           path: '/contact',
           element: <Contact />,
         },

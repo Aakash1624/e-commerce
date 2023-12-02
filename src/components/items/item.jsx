@@ -3,12 +3,12 @@ import './item.css';
 
 const Item = (props) => {
   return (
-    <main className='main'>
+    <main className="main">
       <div className="item">
         <div>
           <img src={props.image} alt="" className="image" />
         </div>
-        <h3>{props.name}</h3>
+        <h3>{props.names}</h3>
         <p>{props.description}</p>
         <p className="item-price">₹{props.price}</p>
         <br />

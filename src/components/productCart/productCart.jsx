@@ -3,7 +3,9 @@ import ProductTitle from './productTitle';
 import categories_data from '../../constants/products';
 import './productCart.css';
 // import { FaLongArrowAltRight } from 'react-icons/fa';
+import { useParams } from 'react-router-dom';
 
+// const { categoryId } = useParams();
 const ProductCart = () => {
   return (
     <div className="popular-container">
@@ -13,7 +15,7 @@ const ProductCart = () => {
         return (
           <>
             <div className="product-title-container">
-              <ProductTitle key={id} id={category.id} name={category.name} />
+              <ProductTitle key={id} id={category.id} names={category.names} />
             </div>
             <div className="product-items">
               {category.products &&
@@ -23,7 +25,7 @@ const ProductCart = () => {
                       key={id}
                       id={product.id}
                       image={product.image}
-                      name={product.name}
+                      names={product.names}
                       description={product.description}
                       price={product.price}
                     />
@@ -38,5 +40,4 @@ const ProductCart = () => {
     </div>
   );
 };
-
-export default ProductCart;
+export default { ProductCart };

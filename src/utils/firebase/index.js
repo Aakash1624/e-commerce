@@ -27,16 +27,31 @@ const googleProvider = new GoogleAuthProvider();
 const signInWithGooglePopup = () =>
   signInWithPopup(commerceAuth, googleProvider);
 
-export { signInWithGooglePopup };
-
 //Fire Store DataBase
 
 const commerceDb = getFirestore(commerceApp);
 
-const addData = async (collection,id,value) => {
-  const res = await setDoc(doc(commerceDb, collection, id),value);
+const createUserDocumentFromAuth = async (userAuth) => {
+  if (!userAuth) return;
+  const userDocRef = doc(commerceDb, 'users', userAuth.uid);
+  console.log(userDocRef);
+  const userSnapShop = await getDoc(userDocRef);
+  console.log(userSnapShop);
+  console.log(userSnapShop.exist());
 
-  console.log(res);
+  if (!userSnapShop.exists()) {
+    const { displayName, email } = userAuth;
+    const createAdt = new Date();
+    try {
+      await setDoc(userDocRef, {
+        displayName,
+        email,
+        createAdt,
+      });
+    } catch (err) {
+      console.log('error message', err.message);
+    }
+  }
 };
 
-addData('cities', 'LA', { name: 'Los Angeles', state: 'CA', country: 'USA' });
+export { signInWithGooglePopup, createUserDocumentFromAuth };
