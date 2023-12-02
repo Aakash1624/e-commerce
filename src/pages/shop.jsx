@@ -13,7 +13,6 @@ const Shop = () => {
     <>
       <div className="shop">
         <ProductCart />
-        <CatPreview />
       </div>
     </>
   );

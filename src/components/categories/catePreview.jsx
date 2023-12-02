@@ -2,35 +2,27 @@ import Item from '../items/item';
 import categories_data from '../../constants/products';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './category.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const CatPreview = (catProps, id) => {
-  <div className="category-container">
-    <div className="preview">
-      {categories_data
-        .filter((product, index) => index < 4)
-        .map((products) => (
-          <Item key={products.id} product={products} />
-        ))}
-    </div>
-    {/* return (
-    <Item
-      key={id}
-      image={catProps.image}
-      names={catProps.names}
-      description={catProps.description}
-      id={catProps.id}
-      price={catProps.price}
-    />
-    ); */}
-  </div>;
   const navigate = useNavigate();
-
   const navigateHandler = (category) => {
-    navigate(`/shop/${category.toLowerCase()}`);
+    navigate(`/shop`);
   };
+
+  let [item, setItem] = useState('');
+  // item = useParams();
+  // console.log(item);
+
+  const filteredProducts = item
+    ? categories_data.filter((category) => category.names === item)
+    : categories_data;
+
+  // console.log(filteredProducts);
+
   return (
-    <main className="cat-main" key={id}>
+    <main className="cat-main">
       <div
         className="cat-item"
         onClick={() => {
@@ -46,7 +38,77 @@ const CatPreview = (catProps, id) => {
         <button className="button-shop">Shop Now</button>
       </div>
     </main>
+    // <>
+    //   {filteredProducts.map((categories) => {
+    //     return (
+    //       <main className="cat-main">
+    //         <div
+    //           className="cat-item"
+    //           onClick={() => {
+    //             navigateHandler(categories.names);
+    //           }}
+    //         >
+    //           <div className="img-title">
+    //             <h3 className="title-name">
+    //               {categories.names} <FaLongArrowAltRight />
+    //             </h3>
+    //             <img src={categories.image} alt="" className="cat-image" />
+    //           </div>
+    //           {/* <button className="button-shop">Shop Now</button> */}
+    //         </div>
+    //       </main>
+    //     );
+    //   })}
+    // </>
   );
+
+  // <div className="cat-main">
+  //   {filteredProducts.map((category, id) => {
+  //     return (
+  //       <div key={id}>
+  //         <div className="img-title">
+  //           <p className="title-name">
+  //             {category.names} <FaLongArrowAltRight />
+  //           </p>
+  //           <img src={category.image} alt="" className="cat-image" />
+  //           <button onClick={navigateHandler} className="button-shop">
+  //             Shop Now
+  //           </button>
+  //         </div>
+
+  //         <div className="product-card-container">
+  //           {category.products.map((product, id) => {
+  //             return (
+  //               <Item
+  //                 key={id}
+  //                 id={product.id}
+  //                 names={product.names}
+  //                 image={product.image}
+  //                 price={product.price}
+  //                 description={product.description}
+  //               />
+  //             );
+  //           })}
+  //         </div>
+  //       </div>
+  //     );
+  //   })}
+  // </div>
+
+  // return (
+  //   <span key={category.id}>
+  //     <div className="product-category">
+  //       <p className="product-category-title">{category.title}</p>
+  //       <button onClick={navigateHandler}>All category</button>
+  //     </div>
+
+  //     <div className="product-card-container">
+  //       {category.products.map((product) => {
+  //         return <ProductCart key={product.id} product={product} />;
+  //       })}
+  //     </div>
+  //   </span>
+  // );
 };
 
 export default CatPreview;
