@@ -2,7 +2,7 @@ import categories_data from '../../constants/products';
 import './category.css';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import CatPreview from './catePreview';
+import CatPreview from './catePreview':
 
 const CategoryCardHome = () => {
   let navigate = useNavigate();
