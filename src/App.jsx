@@ -6,6 +6,7 @@ import Contact from './pages/contact';
 import Login from './singin/login/login';
 import Cart from './pages/cart';
 import Root from './components/routes/root.route';
+import CatPreview from './components/categories/catePreview';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -22,8 +23,8 @@ const App = () => {
           element: <Shop />,
         },
         {
-          path: '/shop:item',
-          element: <Shop />,
+          path: '/shop/:item',
+          element: <CatPreview />,
         },
         {
           path: '/contact',

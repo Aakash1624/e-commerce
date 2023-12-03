@@ -2,22 +2,19 @@ import Item from '../items/item';
 import categories_data from '../../constants/products';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './category.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 const CatPreview = (catProps) => {
   let navigate = useNavigate();
 
   const navigateToCategory = (id) => {
-    console.log(id);
-    navigate(`/shop/$`);
+    // console.log(id);
+    navigate(`/shop`);
   };
 
-  // let [item, setItem] = useState(categories_data);
-  // item = useParams();
-  // console.log(item);
-
-  let item = '';
+  const { item } = useParams();
+  console.log(`Hello`, item);
 
   const filteredProducts = item
     ? categories_data.filter((category) => category.names === item.names)

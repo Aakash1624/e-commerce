@@ -11,9 +11,7 @@ const Shop = () => {
 
   return (
     <>
-      <div className="shop">
-        <AllProducts />
-      </div>
+      <AllProducts />
       <CatPreview />
     </>
   );
