@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import MyContext from './myContext';
+import categories_data from '../constants/products';
+categories_data;
 
 const MyState = (props) => {
-  const [filterCat, setFilterCat] = useState('');
+  const [filterCat, setFilterCat] = useState();
   const value = { filterCat, setFilterCat };
 
   return (

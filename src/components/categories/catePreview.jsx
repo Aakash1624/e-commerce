@@ -5,110 +5,74 @@ import './category.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-const CatPreview = (catProps, id) => {
-  const navigate = useNavigate();
-  const navigateHandler = (category) => {
-    navigate(`/shop`);
+const CatPreview = (catProps) => {
+  let navigate = useNavigate();
+
+  const navigateToCategory = (id) => {
+    console.log(id);
+    navigate(`/shop/$`);
   };
 
-  let [item, setItem] = useState('');
+  // let [item, setItem] = useState(categories_data);
   // item = useParams();
   // console.log(item);
 
+  let item = '';
+
   const filteredProducts = item
-    ? categories_data.filter((category) => category.names === item)
+    ? categories_data.filter((category) => category.names === item.names)
     : categories_data;
 
-  // console.log(filteredProducts);
+  console.log(filteredProducts);
 
   return (
-    <main className="cat-main">
-      <div
-        className="cat-item"
-        onClick={() => {
-          navigateHandler(catProps.names);
-        }}
-      >
-        <div className="img-title">
-          <h3 className="title-name">
-            {catProps.names} <FaLongArrowAltRight />
-          </h3>
-          <img src={catProps.image} alt="" className="cat-image" />
+    <div>
+      {filteredProducts.map((product) => {
+        return (
+          <div className="product-title-container">
+            <h3 className="title">
+              {product.names}
+              <FaLongArrowAltRight />
+            </h3>
+
+            <div>
+              {product.products &&
+                product.products.map((items) => {
+                  // console.log(items);
+                  return (
+                    <main className="main">
+                      <div className="item">
+                        <div>
+                          <img src={items.image} alt="" className="image" />
+                        </div>
+                        <h3>{items.names}</h3>
+                        <p>{items.description}</p>
+                        <p className="item-price">₹{items.price}</p>
+                        <br />
+                      </div>
+                      <div className="addCart-container">
+                        <button className="btn-addCart">Add to Cart</button>
+                      </div>
+                    </main>
+                  );
+                })}
+            </div>
+          </div>
+        );
+      })}
+      <main className="cat-main">
+        <div className="cat-item">
+          <div className="img-title">
+            <h3 className="title-name">
+              {catProps.names} <FaLongArrowAltRight />
+            </h3>
+            <img src={catProps.image} alt="" className="cat-image" />
+          </div>
+          <button className="button-shop">Shop Now</button>
         </div>
-        <button className="button-shop">Shop Now</button>
-      </div>
-    </main>
-    // <>
-    //   {filteredProducts.map((categories) => {
-    //     return (
-    //       <main className="cat-main">
-    //         <div
-    //           className="cat-item"
-    //           onClick={() => {
-    //             navigateHandler(categories.names);
-    //           }}
-    //         >
-    //           <div className="img-title">
-    //             <h3 className="title-name">
-    //               {categories.names} <FaLongArrowAltRight />
-    //             </h3>
-    //             <img src={categories.image} alt="" className="cat-image" />
-    //           </div>
-    //           {/* <button className="button-shop">Shop Now</button> */}
-    //         </div>
-    //       </main>
-    //     );
-    //   })}
-    // </>
+      </main>
+    </div>
   );
-
-  // <div className="cat-main">
-  //   {filteredProducts.map((category, id) => {
-  //     return (
-  //       <div key={id}>
-  //         <div className="img-title">
-  //           <p className="title-name">
-  //             {category.names} <FaLongArrowAltRight />
-  //           </p>
-  //           <img src={category.image} alt="" className="cat-image" />
-  //           <button onClick={navigateHandler} className="button-shop">
-  //             Shop Now
-  //           </button>
-  //         </div>
-
-  //         <div className="product-card-container">
-  //           {category.products.map((product, id) => {
-  //             return (
-  //               <Item
-  //                 key={id}
-  //                 id={product.id}
-  //                 names={product.names}
-  //                 image={product.image}
-  //                 price={product.price}
-  //                 description={product.description}
-  //               />
-  //             );
-  //           })}
-  //         </div>
-  //       </div>
-  //     );
-  //   })}
-  // </div>
-
-  // return (
-  //   <span key={category.id}>
-  //     <div className="product-category">
-  //       <p className="product-category-title">{category.title}</p>
-  //       <button onClick={navigateHandler}>All category</button>
-  //     </div>
-
-  //     <div className="product-card-container">
-  //       {category.products.map((product) => {
-  //         return <ProductCart key={product.id} product={product} />;
-  //       })}
-  //     </div>
-  //   </span>
-  // );
 };
 
 export default CatPreview;

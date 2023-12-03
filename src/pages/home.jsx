@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/hero/hero';
-import CategoryCardHome from '../components/categories/categories';
+import CategoryCardHome from '../components/categories/categoriesItem';
 
 const Home = () => {
   return (

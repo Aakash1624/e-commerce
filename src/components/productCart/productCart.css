@@ -43,21 +43,37 @@
   border-top-left-radius: 12px;
 }
 
-.item-title {
-  padding: 0.5rem 3rem;
-  background-color: #c4f75d;
-  border-radius: 75px;
-}
-
 .title {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
+  padding: 0.5rem 3rem;
+  background-color: #c4f75d;
+  border-radius: 75px;
 }
 
 .product-title-container {
   display: flex;
   margin-top: 30px;
   margin-left: -80%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content-container {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.product-item:hover {
+  .product-title {
+    color: aqua;
+  }
 }
