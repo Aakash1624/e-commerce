@@ -34,11 +34,7 @@ const CategoryCardHome = () => {
                     </h3>
                     <img src={catProduct.image} alt="" className="cat-image" />
                   </div>
-                  {/* <br /> */}
                 </div>
-                {/* <div className="addCart-container">
-                  <button className="btn-addCart">Add to Cart</button>
-                </div> */}
               </main>
             </div>
           );

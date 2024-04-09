@@ -49,6 +49,7 @@ li {
   justify-content: space-around;
   align-items: center;
   box-shadow: var(--clr-light-shadow);
+  background-color: rgba(7, 128, 128, 0.738);
 }
 
 .search-container {
@@ -63,6 +64,9 @@ li {
   border-radius: 8px;
   outline: none;
   /* gap: 20px; */
+  ::placeholder {
+    color: white;
+  }
 }
 
 .search {

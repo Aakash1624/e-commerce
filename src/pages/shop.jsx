@@ -12,7 +12,7 @@ const Shop = () => {
   return (
     <>
       <AllProducts />
-      <CatPreview />
+      {/* <CatPreview /> */}
     </>
   );
 };

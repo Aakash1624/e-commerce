@@ -73,7 +73,10 @@
 }
 
 .product-item:hover {
+  transform: scale(1.04);
+  transition: 0.5s;
   .product-title {
-    color: aqua;
+    color: rgb(215, 108, 236);
+    /* color: yellow; */
   }
 }

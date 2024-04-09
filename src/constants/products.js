@@ -10,7 +10,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/CasualShirt_8.webp',
+        image: '/src/assets/souled/CasualShirt_8.webp',
       },
       {
         id: 12,
@@ -18,7 +18,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/CasualShirt_1.webp',
+        image: '/src/assets/souled/CasualShirt_1.webp',
       },
       {
         id: 13,
@@ -26,7 +26,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/CasualShirt_2.webp',
+        image: '/src/assets/souled/CasualShirt_2.webp',
       },
       {
         id: 14,
@@ -34,7 +34,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/CasualShirt_3.webp',
+        image: '/src/assets/souled/CasualShirt_3.webp',
       },
       {
         id: 15,
@@ -42,7 +42,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/CasualShirt_4.webp',
+        image: '/src/assets/souled/CasualShirt_4.webp',
       },
       {
         id: 16,
@@ -50,7 +50,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/CasualShirt_5.webp',
+        image: '/src/assets/souled/CasualShirt_5.webp',
       },
       {
         id: 17,
@@ -58,7 +58,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/CasualShirt_6.webp',
+        image: '/src/assets/souled/CasualShirt_6.webp',
       },
       {
         id: 18,
@@ -66,7 +66,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/CasualShirt_7.webp',
+        image: '/src/assets/souled/CasualShirt_7.webp',
       },
     ],
   },
@@ -81,7 +81,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/T-shirt_1.webp',
+        image: '/src/assets/souled/T-shirt_1.webp',
       },
       {
         id: 12,
@@ -89,7 +89,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/T-shirt_2.webp',
+        image: '/src/assets/souled/T-shirt_2.webp',
       },
       {
         id: 13,
@@ -97,7 +97,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/T-shirt_3.webp',
+        image: '/src/assets/souled/T-shirt_3.webp',
       },
       {
         id: 14,
@@ -105,7 +105,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/T-shirt_4.webp',
+        image: '/src/assets/souled/T-shirt_4.webp',
       },
       {
         id: 15,
@@ -113,7 +113,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/T-shirt_5.webp',
+        image: '/src/assets/souled/T-shirt_5.webp',
       },
       {
         id: 16,
@@ -121,7 +121,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/T-shirt_6.webp',
+        image: '/src/assets/souled/T-shirt_6.webp',
       },
       {
         id: 17,
@@ -129,7 +129,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/T-shirt_7.webp',
+        image: '/src/assets/souled/T-shirt_7.webp',
       },
       {
         id: 18,
@@ -137,7 +137,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/T-shirt_8.webp',
+        image: '/src/assets/souled/T-shirt_8.webp',
       },
     ],
   },
@@ -152,7 +152,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/Jean_1.webp',
+        image: '/src/assets/souled/Jean_1.webp',
       },
       {
         id: 12,
@@ -160,7 +160,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/Jean_2.webp',
+        image: '/src/assets/souled/Jean_2.webp',
       },
       {
         id: 13,
@@ -168,7 +168,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/Jean_3.webp',
+        image: '/src/assets/souled/Jean_3.webp',
       },
       {
         id: 14,
@@ -176,7 +176,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/Jean_4.webp',
+        image: '/src/assets/souled/Jean_4.webp',
       },
       {
         id: 15,
@@ -184,7 +184,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/Jean_5.webp',
+        image: '/src/assets/souled/Jean_5.webp',
       },
       {
         id: 16,
@@ -192,7 +192,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/Jean_6.webp',
+        image: '/src/assets/souled/Jean_6.webp',
       },
       {
         id: 17,
@@ -200,7 +200,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/Jean_7.webp',
+        image: '/src/assets/souled/Jean_7.webp',
       },
       {
         id: 18,
@@ -208,7 +208,7 @@ const categories_data = [
         description:
           'aliquet bibendum enim facilisis gravida neque convallis a cras',
         price: '1200',
-        image: 'src/assets/souled/Jean_8.webp',
+        image: '/src/assets/souled/Jean_8.webp',
       },
     ],
   },

@@ -1,8 +1,10 @@
 const Contact = () => {
   return (
-    <>
-      <h1>Contact</h1>
-    </>
+    <div>
+      <a href="https://wa.me/6383017428">
+        <img src="/src/assets/images/whatsapp_icon.png" alt="" />
+      </a>
+    </div>
   );
 };
 

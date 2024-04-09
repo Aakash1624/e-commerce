@@ -1,6 +1,6 @@
 .hero {
   height: auto;
-  background: linear-gradient(180deg, #05b7ed, #ffe1e1 100%);
+  /* background: linear-gradient(180deg, #ed0505, #8e8c8c 100%); */
   display: flex;
 }
 

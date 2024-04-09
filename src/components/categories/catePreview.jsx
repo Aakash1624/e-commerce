@@ -17,34 +17,37 @@ const CatPreview = (catProps) => {
   console.log(`Hello`, item);
 
   const filteredProducts = item
-    ? categories_data.filter((category) => category.names === item.names)
+    ? categories_data.filter((category) => category.names === item)
     : categories_data;
 
-  console.log(filteredProducts);
+  console.log(`Product`, filteredProducts);
 
   return (
     <div>
       {filteredProducts.map((product) => {
         return (
-          <div className="product-title-container">
-            <h3 className="title">
-              {product.names}
-              <FaLongArrowAltRight />
-            </h3>
-
-            <div>
+          <div className="popular-container">
+            <div className="product-title-container">
+              <h3 className="title">
+                {product.names}
+                <FaLongArrowAltRight />
+              </h3>
+            </div>
+            <div className="product-items">
               {product.products &&
-                product.products.map((items) => {
-                  // console.log(items);
+                product.products.map((items, id) => {
+                  // console.log(product);
                   return (
-                    <main className="main">
-                      <div className="item">
+                    <main className="main" key={id}>
+                      <div className="product-item">
                         <div>
                           <img src={items.image} alt="" className="image" />
                         </div>
-                        <h3>{items.names}</h3>
-                        <p>{items.description}</p>
-                        <p className="item-price">₹{items.price}</p>
+                        <div className="content-container">
+                          <h3 className="product-title">{items.names}</h3>
+                          <p>{items.description}</p>
+                          <p className="item-price">₹{items.price}</p>
+                        </div>
                         <br />
                       </div>
                       <div className="addCart-container">
@@ -54,22 +57,15 @@ const CatPreview = (catProps) => {
                   );
                 })}
             </div>
+            <br />
+            <hr />
           </div>
         );
       })}
-      <main className="cat-main">
-        <div className="cat-item">
-          <div className="img-title">
-            <h3 className="title-name">
-              {catProps.names} <FaLongArrowAltRight />
-            </h3>
-            <img src={catProps.image} alt="" className="cat-image" />
-          </div>
-          <button className="button-shop">Shop Now</button>
-        </div>
-      </main>
     </div>
   );
 };
+{
+}
 
 export default CatPreview;
