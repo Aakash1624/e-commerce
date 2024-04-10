@@ -3,6 +3,7 @@ const Contact = () => {
     <div>
       <a href="https://wa.me/6383017428">
         <img src="/src/assets/images/whatsapp_icon.png" alt="" />
+        whatsapp me
       </a>
     </div>
   );
