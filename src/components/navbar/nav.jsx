@@ -9,7 +9,11 @@ const NavBar = () => {
   return (
     <main className="nav-container">
       <div className="logo-container">
-        <img src="src\assets\images\flipkart.svg" alt="logo" className="logo" />
+        <img
+          src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTb8YoV8TYHM3Ot4Je-iMO1wnZS7L5gPbA-Bz1760IcYrHmI63R"
+          alt="logo"
+          className="logo"
+        />
       </div>
       <div className="search-container">
         <CiSearch className="search-icons" />
@@ -25,17 +29,17 @@ const NavBar = () => {
         <ul className="nav-menu-1">
           <li>
             <Link to="/" className="link">
-              Home
+              HOME
             </Link>
           </li>
           <li>
             <Link to="/shop" className="link">
-              Shop
+              SHOP
             </Link>
           </li>
           <li>
             <Link to="/contact" className="link">
-              Contact
+              CONTACT US
             </Link>
           </li>
           <li>
@@ -43,15 +47,12 @@ const NavBar = () => {
               <GiShoppingCart className="cart" />
             </Link>
           </li>
-        </ul>
-        <div className="nav-menu-2">
-          <PiUserCircle className="profile" />
           <li>
             <Link to="/login" className="link">
-              <button className="btn-login">Login</button>
+              <PiUserCircle className="btn-login" />
             </Link>
           </li>
-        </div>
+        </ul>
       </div>
     </main>
   );

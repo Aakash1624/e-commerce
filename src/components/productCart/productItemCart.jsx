@@ -1,4 +1,3 @@
-import Item from '../items/item';
 
 import categories_data from '../../constants/products';
 import './productCart.css';
@@ -20,7 +19,7 @@ const AllProducts = () => {
         return (
           <>
             <div className="product-title-container">
-              <h3 className="title">
+              <h3 className="main-title">
                 {category.names}
                 <FaLongArrowAltRight />
               </h3>

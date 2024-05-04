@@ -22,7 +22,7 @@
 }
 
 .popular-title {
-  color: black;
+  color: white;
   font-size: 2rem;
   font-weight: 600;
   display: flex;
@@ -43,13 +43,14 @@
   border-top-left-radius: 12px;
 }
 
-.title {
+.main-title {
+  color: rgb(238, 231, 231);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   padding: 0.5rem 3rem;
-  background-color: #c4f75d;
+  background-color: rgb(229, 72, 187);
   border-radius: 75px;
 }
 
@@ -76,7 +77,6 @@
   transform: scale(1.04);
   transition: 0.5s;
   .product-title {
-    color: rgb(215, 108, 236);
-    /* color: yellow; */
+    color: rgb(252, 5, 5);
   }
 }

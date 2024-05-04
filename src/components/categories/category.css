@@ -13,7 +13,6 @@
 }
 
 .cat-popular-container {
-  /* background: linear-gradient(180deg, #eb4545, #ea6f6f 50%); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,10 +47,9 @@
 .title-name {
   position: absolute;
   top: 390px;
-  /* left: 5px; */
   padding: 0.25rem 2rem;
   color: white;
-  background-color: rgb(19, 19, 19);
+  background-color: rgb(77, 77, 77);
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -62,8 +60,8 @@
 .category-item:hover {
   .title-name {
     transition: ease-in-out 0.3s;
-    background-color: rgb(7, 128, 128);
-    color: yellow;
+    background-color: rgb(252, 251, 251);
+    color: rgb(255, 0, 0);
   }
 }
 
@@ -77,12 +75,28 @@
   font-size: 16px;
   font-weight: 700;
   padding: 0.5rem;
-  background-color: #0af0f0;
+  background-color: #25f00a;
   outline: none;
   border: none;
   cursor: pointer;
 }
 
-.main {
-  display: flex;
+.btn-addCart {
+  background-color: #04feab;
+  color: whitesmoke;
+  padding: 0.5rem;
+  width: 350px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-addCart:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+  background: linear-gradient(80deg, #fd2d2d, #f903d0 100%);
+  transition: ease-out 0.3s;
 }

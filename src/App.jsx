@@ -38,6 +38,10 @@ const App = () => {
           path: '/login',
           element: <Login />,
         },
+        {
+          path: '/myOrder',
+          element: <Cart />,
+        },
       ],
     },
   ]);
