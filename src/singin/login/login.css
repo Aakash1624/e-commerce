@@ -37,12 +37,12 @@ body {
   margin: 0 auto;
 }
 
-.title {
+/* .title {
   display: flex;
   align-items: left;
   justify-content: left;
   color: black;
-}
+} */
 
 .title-container {
   display: flex;

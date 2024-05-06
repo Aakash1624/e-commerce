@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from 'react';
-import MyContext from './myContext';
 
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
@@ -16,6 +15,5 @@ const CartProvider = ({ children }) => {
 
   return <MyContext.Provider value={value}>{children}</MyContext.Provider>;
 };
-
 
 export default CartProvider;

@@ -1,15 +1,11 @@
-
 import categories_data from '../../constants/products';
 import './productCart.css';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import './productCart.css';
 
-import MyContext from '../../context/myContext';
 import { useContext } from 'react';
 
 const AllProducts = () => {
-  const context = useContext(MyContext);
-  const { filterCat, setFilterCat } = context;
-
   return (
     <div className="popular-container">
       <h1 className="popular-title">All Products</h1>
