@@ -118,9 +118,24 @@ hr {
 }
 
 .cart-items-title {
-  padding: 0rem 10rem;
+  padding: 0rem 8rem;
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr;
   color: grey;
   font-size: max(1vw, 12px);
+}
+
+.cart-product {
+  display: flex;
+  gap: 5rem;
+}
+.cart-product-details {
+  gap:1rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr;
+}
+
+.cart-img img {
+  width: 150px;
+  height: 150px;
 }
