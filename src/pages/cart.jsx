@@ -4,7 +4,7 @@ const Cart = () => {
 
   // const {cartItems,food_list,removeCart} = useContext();
   return (
-    <div className="cart">
+    <div className="cart-page">
       <div className="cart-items">
         <div className="cart-items-title">
           <p>Items</p>

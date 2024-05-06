@@ -2,10 +2,12 @@ import categories_data from '../../constants/products';
 import './productCart.css';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './productCart.css';
+// import { storeContext } from '../../context/storeContext';
 
-import { useContext } from 'react';
+// import { useContext } from 'react';
 
 const AllProducts = () => {
+  // const { addToCart } = useContext(storeContext);
   return (
     <div className="popular-container">
       <h1 className="popular-title">All Products</h1>

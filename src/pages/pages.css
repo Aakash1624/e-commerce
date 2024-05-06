@@ -112,3 +112,15 @@ hr {
   transform: scale(1.04);
   transition: 0.5s;
 }
+
+.cart-page {
+  margin-top: 88px;
+}
+
+.cart-items-title {
+  padding: 0rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 1fr;
+  color: grey;
+  font-size: max(1vw, 12px);
+}
