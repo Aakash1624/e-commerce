@@ -1,5 +1,7 @@
 import { useContext } from 'react';
 import { RxCross2 } from 'react-icons/rx';
+import { CiSquarePlus } from 'react-icons/ci';
+import { CiSquareMinus } from 'react-icons/ci';
 
 const Cart = () => {
   // const {cartItems,food_list,removeCart} = useContext();
@@ -24,7 +26,15 @@ const Cart = () => {
         <img src="src\assets\souled\T-shirt_1.webp" alt="" />
         <p>T-shirt</p>
         <p>₹0</p>
-        <p>1</p>
+        <div className="quantity">
+          <p className="btn-quantity">
+            <CiSquarePlus />
+          </p>
+          <p>1</p>
+          <p className="btn-quantity">
+            <CiSquareMinus />
+          </p>
+        </div>
         <p>₹0</p>
         <p className="delete">
           <RxCross2 />

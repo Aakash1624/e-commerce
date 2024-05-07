@@ -145,8 +145,36 @@ hr {
   justify-content: center;
 }
 
+.quantity {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.btn-quantity {
+font-size: 20px;
+}
+
+.btn-quantity:hover{
+  color: gray;
+  cursor: pointer;
+}
+
 .delete {
   font-size: 20px;
   font-weight: 700;
   color: rgb(245, 19, 3);
+}
+
+.delete:hover{
+  cursor: pointer;
+  color: rgb(204, 4, 4);
+}
+
+.cart-amt {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
 }
