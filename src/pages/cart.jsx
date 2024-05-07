@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { RxCross2 } from 'react-icons/rx';
 
 const Cart = () => {
   // const {cartItems,food_list,removeCart} = useContext();
@@ -14,22 +15,20 @@ const Cart = () => {
             <p>Total</p>
             <p>Remove</p>
           </div>
+          <br />
+          <hr />
         </div>
       </div>
 
-      <div className="cart-container">
-        <div className="cart-product">
-          <div className="cart-img">
-            <img src="src\assets\souled\T-shirt_1.webp" alt="" />
-          </div>
-          <div className="cart-product-details">
-            <p>T-shirt</p>
-            <p>₹0</p>
-            <p>1</p>
-            <p>₹0</p>
-            <p>X</p>
-          </div>
-        </div>
+      <div className="cart-items-title cart-items-item">
+        <img src="src\assets\souled\T-shirt_1.webp" alt="" />
+        <p>T-shirt</p>
+        <p>₹0</p>
+        <p>1</p>
+        <p>₹0</p>
+        <p className="delete">
+          <RxCross2 />
+        </p>
       </div>
       <div className="cart-amt">Total amount : ₹0</div>
     </>
