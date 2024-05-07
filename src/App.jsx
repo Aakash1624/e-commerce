@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/home';
 import Shop from './pages/shop';
@@ -9,6 +9,8 @@ import Root from './components/routes/root.route';
 import CatPreview from './components/categories/catePreview';
 
 const App = () => {
+  const [cart, setCart] = useState([]);
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -16,11 +18,11 @@ const App = () => {
       children: [
         {
           path: '',
-          element: <Home />,
+          element: <Home/>,
         },
         {
           path: '/shop',
-          element: <Shop />,
+          element: <Shop cart={cart} setCart={setCart} />,
         },
         {
           path: '/shop/:item',
@@ -32,7 +34,7 @@ const App = () => {
         },
         {
           path: '/cart',
-          element: <Cart />,
+          element: <Cart cart={cart} setCart={setCart} />,
         },
         {
           path: '/login',

@@ -1,21 +1,30 @@
+import React, { useState } from 'react';
 import categories_data from '../../constants/products';
-import './productCart.css';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './productCart.css';
-// import { storeContext } from '../../context/storeContext';
+import Cart from '../../pages/cart'; // Import the Cart component
 
-// import { useContext } from 'react';
+const Product = ({ cart, setCart, product }) => {
+  // Define state to manage the cart
+  // const [cart, setCart] = useState([]);
 
-const AllProducts = () => {
-  // const { addToCart } = useContext(storeContext);
+  // Function to add a product to the cart
+  const addToCart = (product) => {
+    // Make a copy of the current cart state and add the new product
+    const updatedCart = [...cart, product];
+    // Update the cart state with the new array
+    setCart(updatedCart);
+    // Log the added product
+    console.log('Product added to cart:', product);
+  };
+
   return (
     <div className="popular-container">
       <h1 className="popular-title">All Products</h1>
       <hr />
-      {categories_data.map((category) => {
-        // console.log( category);
+      {categories_data.map((category, index) => {
         return (
-          <>
+          <div key={index}>
             <div className="product-title-container">
               <h3 className="main-title">
                 {category.names}
@@ -25,7 +34,6 @@ const AllProducts = () => {
             <div className="product-items">
               {category.products &&
                 category.products.map((product, id) => {
-                  // console.log(product);
                   return (
                     <main className="main" key={id}>
                       <div className="product-item">
@@ -40,7 +48,13 @@ const AllProducts = () => {
                         <br />
                       </div>
                       <div className="addCart-container">
-                        <button className="btn-addCart">Add to Cart</button>
+                        {/* Pass the product to the addToCart function */}
+                        <button
+                          className="btn-addCart"
+                          onClick={() => addToCart(product)}
+                        >
+                          Add to Cart
+                        </button>
                       </div>
                     </main>
                   );
@@ -48,10 +62,13 @@ const AllProducts = () => {
             </div>
             <br />
             <hr />
-          </>
+          </div>
         );
       })}
+      {/* Render the Cart component and pass the cart state as prop */}
+      <Cart cart={cart} />
     </div>
   );
 };
-export default AllProducts;
+
+export default Product;

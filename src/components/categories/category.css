@@ -100,3 +100,14 @@
   background: linear-gradient(80deg, #fd2d2d, #f903d0 100%);
   transition: ease-out 0.3s;
 }
+
+.title {
+  color: rgb(238, 231, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0.5rem 3rem;
+  background-color: rgb(229, 72, 187);
+  border-radius: 75px;
+}
