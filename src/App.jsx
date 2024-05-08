@@ -18,7 +18,7 @@ const App = () => {
       children: [
         {
           path: '',
-          element: <Home/>,
+          element: <Home />,
         },
         {
           path: '/shop',
@@ -26,7 +26,7 @@ const App = () => {
         },
         {
           path: '/shop/:item',
-          element: <CatPreview />,
+          element: <CatPreview cart={cart} setCart={setCart} />,
         },
         {
           path: '/contact',

@@ -21,13 +21,20 @@ const Cart = ({ cart, setCart }) => {
 
   const handleDecrease = (id) => {
     setCart((prevCart) => {
+      // Update the cart with decreased quantity
       const updatedCart = prevCart.map((item) =>
         item.id === id && item.quantity > 1
           ? { ...item, quantity: item.quantity - 1 }
           : item
       );
-      // Remove the item from the cart if the quantity becomes 0
-      const filteredCart = updatedCart.filter((item) => item.quantity !== 0);
+      console.log('Updated Cart after decrease:', updatedCart); // Log updated cart
+
+      // Filter out the item with quantity 0
+      const filteredCart = updatedCart.filter(
+        (item) => item.quantity !== 0 || item.id !== id
+      );
+      console.log('Filtered Cart after decrease:', filteredCart); // Log filtered cart
+
       return filteredCart;
     });
   };
