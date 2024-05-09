@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from '../navbar/nav';
+import { useState } from 'react';
 
-const Root = () => {
+const Root = ({ cart }) => {
   return (
     <div>
-      <NavBar />
+      <NavBar cart={cart} />
       <Outlet />
     </div>
   );

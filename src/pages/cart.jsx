@@ -39,6 +39,10 @@ const Cart = ({ cart, setCart }) => {
     });
   };
 
+  const totalAmount = cart.reduce((total, item) => {
+    return total + item.price * (item.quantity || 1);
+  }, 0);
+
   return (
     <>
       <div className="cart-page">
@@ -55,8 +59,8 @@ const Cart = ({ cart, setCart }) => {
           <hr />
           {cart.map((item) => (
             <div className="cart-items-title cart-items-item" key={item.id}>
-              <img src={item.image} alt={item.name} />
-              <p>{item.name}</p>
+              <img src={item.image} alt={item.names} />
+              <p>{item.names}</p>
               <p>₹{item.price}</p>
               <div className="quantity">
                 <p
@@ -73,7 +77,7 @@ const Cart = ({ cart, setCart }) => {
                   <CiSquareMinus />
                 </p>
               </div>
-              <p>₹{item.price * (item.quantity || 1)}</p>{' '}
+              <p>₹{item.price * (item.quantity || 1)}</p>
               {/* Calculate total */}
               <p className="delete" onClick={() => removeItemFromCart(item.id)}>
                 <RxCross2 />
@@ -82,7 +86,7 @@ const Cart = ({ cart, setCart }) => {
           ))}
         </div>
       </div>
-      <div className="cart-amt">Total amount : ₹0</div>
+      <div className="cart-amt">Total amount : ₹{totalAmount}</div>
     </>
   );
 };

@@ -4,10 +4,9 @@ import categories_data from '../../constants/products';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './category.css';
 import { useNavigate, useParams } from 'react-router-dom';
+import Cart from '../../pages/cart';
 
-const CatPreview = () => {
-  const [cartItems, setCartItems] = useState([]);
-
+const CatPreview = ({ cart, setCart, product, cartLength }) => {
   let navigate = useNavigate();
 
   const navigateToCategory = (id) => {
@@ -20,9 +19,25 @@ const CatPreview = () => {
     ? categories_data.filter((category) => category.names === item)
     : categories_data;
 
-  const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
-    console.log('Added to cart:', item); // Logging the added item to the console
+  const addToCart = (product) => {
+    // Check if the product already exists in the cart
+    const existingProductIndex = cart.findIndex(
+      (item) => item.id === product.id
+    );
+    if (existingProductIndex !== -1) {
+      // Product already exists in the cart, update its quantity
+      const updatedCart = [...cart];
+      updatedCart[existingProductIndex].quantity += 1;
+      // Update the cart state with the new array
+      setCart(updatedCart);
+    } else {
+      // Product doesn't exist in the cart, add it
+      const updatedCart = [...cart, { ...product, quantity: 1 }];
+      // Update the cart state with the new array
+      setCart(updatedCart);
+    }
+    // Log the added product
+    console.log('Product added to cart:', product);
   };
 
   return (
@@ -65,6 +80,7 @@ const CatPreview = () => {
           <hr />
         </div>
       ))}
+      <Cart cart={cart} />
     </div>
   );
 };

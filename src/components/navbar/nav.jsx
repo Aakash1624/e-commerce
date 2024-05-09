@@ -5,7 +5,7 @@ import { PiUserCircle } from 'react-icons/pi';
 import { Link, Routes, Route } from 'react-router-dom';
 import { GiShoppingCart } from 'react-icons/gi';
 
-const NavBar = () => {
+const NavBar = ({ cart }) => {
   return (
     <main className="nav-container">
       <div className="logo-container">
@@ -45,6 +45,7 @@ const NavBar = () => {
           <li>
             <Link to="/cart" className="link">
               <GiShoppingCart className="cart" />
+              <span className='cart-count'>{cart.length}</span>
             </Link>
           </li>
           <li>

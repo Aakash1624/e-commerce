@@ -6,14 +6,25 @@ import Cart from '../../pages/cart'; // Import the Cart component
 
 const Product = ({ cart, setCart, product }) => {
   // Define state to manage the cart
-  // const [cart, setCart] = useState([]);
 
   // Function to add a product to the cart
   const addToCart = (product) => {
-    // Make a copy of the current cart state and add the new product
-    const updatedCart = [...cart, product];
-    // Update the cart state with the new array
-    setCart(updatedCart);
+    // Check if the product already exists in the cart
+    const existingProductIndex = cart.findIndex(
+      (item) => item.id === product.id
+    );
+    if (existingProductIndex !== -1) {
+      // Product already exists in the cart, update its quantity
+      const updatedCart = [...cart];
+      updatedCart[existingProductIndex].quantity += 1;
+      // Update the cart state with the new array
+      setCart(updatedCart);
+    } else {
+      // Product doesn't exist in the cart, add it
+      const updatedCart = [...cart, { ...product, quantity: 1 }];
+      // Update the cart state with the new array
+      setCart(updatedCart);
+    }
     // Log the added product
     console.log('Product added to cart:', product);
   };
@@ -51,7 +62,9 @@ const Product = ({ cart, setCart, product }) => {
                         {/* Pass the product to the addToCart function */}
                         <button
                           className="btn-addCart"
-                          onClick={() => addToCart(product)}
+                          onClick={() => {
+                            addToCart(product);
+                          }}
                         >
                           Add to Cart
                         </button>

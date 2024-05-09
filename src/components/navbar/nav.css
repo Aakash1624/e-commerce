@@ -110,6 +110,19 @@ li {
 .cart {
   font-size: 32px;
   font-weight: 900;
+  position: static;
+}
+
+.cart-count {
+  display: inline-block;
+  position: relative;
+  bottom: 18px;
+  left: -10px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  background-color: #ffd700;
+  border-radius: 50%;
 }
 
 .nav-menu-container {
@@ -138,5 +151,3 @@ li {
 .btn-login:hover {
   color: #ffd900;
 }
-
-

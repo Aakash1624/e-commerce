@@ -14,7 +14,7 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Root />,
+      element: <Root cart={cart}/>,
       children: [
         {
           path: '',
@@ -42,7 +42,7 @@ const App = () => {
         },
         {
           path: '/myOrder',
-          element: <Cart />,
+          element: <Cart cart={cart} setCart={setCart} />,
         },
       ],
     },

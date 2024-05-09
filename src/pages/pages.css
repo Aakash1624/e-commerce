@@ -114,6 +114,7 @@ hr {
 }
 
 .cart-page {
+  overflow: hidden;
   margin-top: 88px;
 }
 
@@ -152,10 +153,10 @@ hr {
 }
 
 .btn-quantity {
-font-size: 20px;
+  font-size: 20px;
 }
 
-.btn-quantity:hover{
+.btn-quantity:hover {
   color: gray;
   cursor: pointer;
 }
@@ -166,7 +167,7 @@ font-size: 20px;
   color: rgb(245, 19, 3);
 }
 
-.delete:hover{
+.delete:hover {
   cursor: pointer;
   color: rgb(204, 4, 4);
 }
@@ -178,3 +179,5 @@ font-size: 20px;
   display: flex;
   justify-content: center;
 }
+
+
