@@ -2,11 +2,33 @@
   background-color: rgba(207, 235, 238, 0.202);
 }
 
+.carousel .thumb {
+  display: none;
+}
+
+.carousel.carousel-slider .control-arrow {
+  top: 15rem;
+  color: #fff;
+  width: 5rem;
+  height: 5rem;
+  font-size: 8px;
+  padding: 1px;
+}
+
 .contact-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.contact-title {
+  margin-top: 68px;
+}
+
+.contact-title b {
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .contact-content,
@@ -174,11 +196,18 @@ hr {
 }
 
 .cart-amt {
+  margin: 0 auto;
   font-size: 18px;
   font-weight: 500;
   margin-top: 100px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  width: 15rem;
+  height: 3rem;
+  color: whitesmoke;
+  background-color: rgb(2, 124, 84);
+  border-radius: 12px;
 }
 
 .btn-checkout {
@@ -214,6 +243,18 @@ hr {
   display: flex;
   justify-content: center;
   animation: pulse 0.5s infinite alternate;
+}
+
+.order {
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 35px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: whitesmoke;
+  background-color: rgb(5, 74, 73);
+  cursor: pointer;
 }
 
 @keyframes pulse {

@@ -4,6 +4,7 @@ import './nav.css';
 import { PiUserCircle } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
 import { GiShoppingCart } from 'react-icons/gi';
+import categories_data from '../../constants/products';
 
 const NavBar = ({ cart }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -15,14 +16,20 @@ const NavBar = ({ cart }) => {
     // Add more products as needed
   ];
 
-  // Filter products based on search term
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // const filterBySearch = (event) => {
+  //   const query = event.target.value.toLowerCase();
 
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+  //   // Filter the products based on the search term
+  //   const filteredProducts = products.filter((product) => {
+  //     return (
+  //       product.name.toLowerCase().includes(query) ||
+  //       product.description.toLowerCase().includes(query)
+  //     );
+  //   });
+
+  //   // Set the filtered list to state
+  //   setFilteredList(filteredProducts);
+  // };
 
   return (
     <main className="nav-container">
@@ -33,18 +40,17 @@ const NavBar = ({ cart }) => {
           className="logo"
         />
       </div>
-      <div className="search-container">
+      {/* <div className="search-container">
         <CiSearch className="search-icons" />
         <input
-          type="search"
+          type="text"
           name="search"
           id="search"
           className="search"
           placeholder="Search for products"
-          value={searchTerm}
-          onChange={handleInputChange}
+          onChange={filterBySearch}
         />
-      </div>
+      </div> */}
       <div className="nav-menu-container">
         <ul className="nav-menu-1">
           <li>
@@ -75,14 +81,6 @@ const NavBar = ({ cart }) => {
           </li>
         </ul>
       </div>
-
-      {/* {filteredProducts.map((product) => (
-        <div key={product.id}>
-          <h3>{product.name}</h3>
-          <p>{product.description}</p>
-          
-        </div>
-      ))} */}
     </main>
   );
 };

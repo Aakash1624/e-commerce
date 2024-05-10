@@ -18,7 +18,7 @@ const Contact = () => {
       <span>Track, Return/ Exchange or Cancel your orders hassle-free.</span>
       <br />
       <Link to="/myOrder" className="link">
-        <button>my order</button>
+        <button className='order'>my order</button>
       </Link>
       <div className="contact-content">
         <h1>

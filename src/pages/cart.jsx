@@ -2,8 +2,16 @@ import { React, useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { CiSquarePlus } from 'react-icons/ci';
 import { CiSquareMinus } from 'react-icons/ci';
+import MyComponent from '../components/categories/popup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = ({ cart, setCart }) => {
+  const notify = () => {
+    toast.success('Successfully placed your Order!', {
+      style: { color: 'white', background: '#09f04a', marginTop: '100px' },
+    });
+  };
   const [processing, setProcessing] = useState(false);
   const removeItemFromCart = (id) => {
     // Filter out the item with the given id and update the cart state
@@ -57,10 +65,12 @@ const Cart = ({ cart, setCart }) => {
         setProcessing(false); // Remove processing message after clearing the cart
       }, Math.floor(Math.random() * (5000 - 3000 + 1)) + 3000); // Random delay between 3 to 5 seconds
     }
+    notify();
   };
 
   return (
     <>
+      <ToastContainer />
       <div className="cart-page">
         <div className="cart-items">
           <div className="cart-items-title">
@@ -108,9 +118,27 @@ const Cart = ({ cart, setCart }) => {
           Check out
         </button>
       )}
-      {processing && <p className="process">Processing...</p>}
     </>
   );
 };
 
 export default Cart;
+
+// import React from 'react';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
+// const MyComponent = () => {
+//   const notify = () => {
+//     toast.success('Hello, this is a toast message!');
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={notify}>Show Toast</button>
+//       <ToastContainer />
+//     </div>
+//   );
+// };
+
+// export default MyComponent;

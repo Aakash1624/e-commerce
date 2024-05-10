@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import CatPreview from './catePreview';
 
 const CategoryCardHome = () => {
+
   let navigate = useNavigate();
 
   const navigateToCategory = (id) => {
@@ -33,6 +34,7 @@ const CategoryCardHome = () => {
                       {catProduct.names} <FaLongArrowAltRight />
                     </h3>
                     <img src={catProduct.image} alt="" className="cat-image" />
+                    <br />
                   </div>
                 </div>
               </main>

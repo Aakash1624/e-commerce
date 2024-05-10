@@ -7,6 +7,7 @@ import Login from './singin/login/login';
 import Cart from './pages/cart';
 import Root from './components/routes/root.route';
 import CatPreview from './components/categories/catePreview';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -14,7 +15,7 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Root cart={cart}/>,
+      element: <Root cart={cart} />,
       children: [
         {
           path: '',

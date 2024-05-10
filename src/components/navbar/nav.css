@@ -65,6 +65,7 @@ li {
   align-items: center;
   box-shadow: var(--clr-light-shadow);
   background-color: #cc1006;
+  /* position: fixed; */
 }
 
 /* Styling for search container */
@@ -90,7 +91,7 @@ li {
   outline: none;
 }
 
-.search::placeholder{
+.search::placeholder {
   color: rgb(251, 180, 2);
 }
 

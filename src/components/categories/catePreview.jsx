@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
-import Item from '../items/item';
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import categories_data from '../../constants/products';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './category.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import Cart from '../../pages/cart';
-import './category.css';
+import MyComponent from './popup';
 
 const CatPreview = ({ cart, setCart, product, cartLength }) => {
-  let navigate = useNavigate();
-
-  const navigateToCategory = (id) => {
-    navigate(`/shop`);
+  const notify = () => {
+    toast.success('Product Added to the Cart !', {
+      style: { color: 'white', background: '#09f04a', marginTop: '100px' },
+    });
   };
+  let navigate = useNavigate();
 
   const { item } = useParams();
 
@@ -37,14 +38,15 @@ const CatPreview = ({ cart, setCart, product, cartLength }) => {
       // Update the cart state with the new array
       setCart(updatedCart);
     }
-    // Log the added product
-    console.log('Product added to cart:', product);
+    // Notify after updating the cart
+    notify();
   };
 
   return (
     <div>
+      <ToastContainer />
       {filteredProducts.map((product) => (
-        <div className="popular-container" key={product.names}>
+        <div className="popular-container" key={product.id}>
           <div className="product-title-container">
             <h3 className="shop-title">
               {product.names}
@@ -54,19 +56,12 @@ const CatPreview = ({ cart, setCart, product, cartLength }) => {
           <div className="product-items">
             {product.products &&
               product.products.map((items) => (
-                <main className="main" key={items.names}>
+                <main className="main-product" key={items.id}>
                   <div className="product-item">
-                    <div>
-                      <img src={items.image} alt="" className="image" />
-                    </div>
-                    <div className="content-container">
-                      <h3 className="product-title">{items.names}</h3>
-                      <p>{items.description}</p>
-                      <p className="item-price">₹{items.price}</p>
-                    </div>
-                    <br />
-                  </div>
-                  <div className="addCart-container">
+                    <img src={items.image} alt="" className="image" />
+                    <h3 className="product-title">{items.names}</h3>
+                    <p>{items.description}</p>
+                    <p className="item-price">₹{items.price}</p>
                     <button
                       className="btn-addCart"
                       onClick={() => addToCart(items)}
@@ -76,12 +71,10 @@ const CatPreview = ({ cart, setCart, product, cartLength }) => {
                   </div>
                 </main>
               ))}
+            <br />
           </div>
-          <br />
-          <hr />
         </div>
       ))}
-      {/* <Cart cart={cart} /> */}
     </div>
   );
 };

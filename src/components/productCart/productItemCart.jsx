@@ -3,12 +3,19 @@ import categories_data from '../../constants/products';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './productCart.css';
 import Cart from '../../pages/cart'; // Import the Cart component
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Product = ({ cart, setCart, product }) => {
-  // Define state to manage the cart
+  const notify = () => {
+    toast.success('Product Added to the Cart !', {
+      style: { color: 'white', background: '#09f04a', marginTop: '100px' },
+    });
+  };
 
   // Function to add a product to the cart
   const addToCart = (product) => {
+    notify();
     // Check if the product already exists in the cart
     const existingProductIndex = cart.findIndex(
       (item) => item.id === product.id
@@ -31,8 +38,9 @@ const Product = ({ cart, setCart, product }) => {
 
   return (
     <div className="popular-container">
+      <ToastContainer />
       <h1 className="popular-title">Shop Products</h1>
-      <hr />
+      <hr className="popular-hr" />
       {categories_data.map((category, index) => {
         return (
           <div key={index}>
@@ -55,7 +63,6 @@ const Product = ({ cart, setCart, product }) => {
                         <p>{product.description}</p>
                         <p className="item-price">₹{product.price}</p>
                       </div>
-                      <br />
                     </div>
                     <div className="addCart-container">
                       {/* Pass the product to the addToCart function */}
@@ -73,7 +80,7 @@ const Product = ({ cart, setCart, product }) => {
               })}
             </div>
             <br />
-            <hr />
+            <hr className="product-hr" />
           </div>
         );
       })}
