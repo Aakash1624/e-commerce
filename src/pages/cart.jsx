@@ -1,9 +1,10 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { CiSquarePlus } from 'react-icons/ci';
 import { CiSquareMinus } from 'react-icons/ci';
 
 const Cart = ({ cart, setCart }) => {
+  const [processing, setProcessing] = useState(false);
   const removeItemFromCart = (id) => {
     // Filter out the item with the given id and update the cart state
     const updatedCart = cart.filter((item) => item.id !== id);
@@ -42,6 +43,21 @@ const Cart = ({ cart, setCart }) => {
   const totalAmount = cart.reduce((total, item) => {
     return total + item.price * (item.quantity || 1);
   }, 0);
+
+  const checkOut = () => {
+    if (cart.length === 0) {
+      return; // Don't proceed if the cart is empty
+    } else {
+      // Display processing message
+      setProcessing(true);
+
+      // Clear the cart after 3 to 5 seconds
+      setTimeout(() => {
+        setCart([]);
+        setProcessing(false); // Remove processing message after clearing the cart
+      }, Math.floor(Math.random() * (5000 - 3000 + 1)) + 3000); // Random delay between 3 to 5 seconds
+    }
+  };
 
   return (
     <>
@@ -87,6 +103,12 @@ const Cart = ({ cart, setCart }) => {
         </div>
       </div>
       <div className="cart-amt">Total amount : ₹{totalAmount}</div>
+      {cart.length > 0 && (
+        <button className="btn-checkout" onClick={checkOut}>
+          Check out
+        </button>
+      )}
+      {processing && <p className="process">Processing...</p>}
     </>
   );
 };

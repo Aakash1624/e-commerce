@@ -31,47 +31,46 @@ const Product = ({ cart, setCart, product }) => {
 
   return (
     <div className="popular-container">
-      <h1 className="popular-title">All Products</h1>
+      <h1 className="popular-title">Shop Products</h1>
       <hr />
       {categories_data.map((category, index) => {
         return (
           <div key={index}>
             <div className="product-title-container">
-              <h3 className="main-title">
+              <h3 className="shop-title">
                 {category.names}
                 <FaLongArrowAltRight />
               </h3>
             </div>
             <div className="product-items">
-              {category.products &&
-                category.products.map((product, id) => {
-                  return (
-                    <main className="main" key={id}>
-                      <div className="product-item">
-                        <div>
-                          <img src={product.image} alt="" className="image" />
-                        </div>
-                        <div className="content-container">
-                          <h3 className="product-title">{product.names}</h3>
-                          <p>{product.description}</p>
-                          <p className="item-price">₹{product.price}</p>
-                        </div>
-                        <br />
+              {category.products.map((product, id) => {
+                return (
+                  <main className="main" key={id}>
+                    <div className="product-item">
+                      <div>
+                        <img src={product.image} alt="" className="image" />
                       </div>
-                      <div className="addCart-container">
-                        {/* Pass the product to the addToCart function */}
-                        <button
-                          className="btn-addCart"
-                          onClick={() => {
-                            addToCart(product);
-                          }}
-                        >
-                          Add to Cart
-                        </button>
+                      <div className="content-container">
+                        <h3 className="product-title">{product.names}</h3>
+                        <p>{product.description}</p>
+                        <p className="item-price">₹{product.price}</p>
                       </div>
-                    </main>
-                  );
-                })}
+                      <br />
+                    </div>
+                    <div className="addCart-container">
+                      {/* Pass the product to the addToCart function */}
+                      <button
+                        className="btn-addCart"
+                        onClick={() => {
+                          addToCart(product);
+                        }}
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  </main>
+                );
+              })}
             </div>
             <br />
             <hr />
@@ -79,7 +78,7 @@ const Product = ({ cart, setCart, product }) => {
         );
       })}
       {/* Render the Cart component and pass the cart state as prop */}
-      <Cart cart={cart} />
+      {/* <Cart cart={cart} /> */}
     </div>
   );
 };

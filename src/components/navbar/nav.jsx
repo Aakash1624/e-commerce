@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CiSearch } from 'react-icons/ci';
 import './nav.css';
 import { PiUserCircle } from 'react-icons/pi';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { GiShoppingCart } from 'react-icons/gi';
 
 const NavBar = ({ cart }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Assuming you have a list of products stored in a variable called 'products'
+  const products = [
+    { id: 1, name: 'Hat', description: 'A stylish hat' },
+    { id: 2, name: 'Shoes', description: 'Comfortable shoes' },
+    // Add more products as needed
+  ];
+
+  // Filter products based on search term
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
     <main className="nav-container">
       <div className="logo-container">
@@ -23,6 +41,8 @@ const NavBar = ({ cart }) => {
           id="search"
           className="search"
           placeholder="Search for products"
+          value={searchTerm}
+          onChange={handleInputChange}
         />
       </div>
       <div className="nav-menu-container">
@@ -45,7 +65,7 @@ const NavBar = ({ cart }) => {
           <li>
             <Link to="/cart" className="link">
               <GiShoppingCart className="cart" />
-              <span className='cart-count'>{cart.length}</span>
+              <span className="cart-count">{cart.length}</span>
             </Link>
           </li>
           <li>
@@ -55,6 +75,14 @@ const NavBar = ({ cart }) => {
           </li>
         </ul>
       </div>
+
+      {/* {filteredProducts.map((product) => (
+        <div key={product.id}>
+          <h3>{product.name}</h3>
+          <p>{product.description}</p>
+          
+        </div>
+      ))} */}
     </main>
   );
 };

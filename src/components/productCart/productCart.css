@@ -22,7 +22,7 @@
 }
 
 .popular-title {
-  color: white;
+  color: black;
   font-size: 2rem;
   font-weight: 600;
   display: flex;
@@ -43,21 +43,22 @@
   border-top-left-radius: 12px;
 }
 
-.main-title {
+.product-title-container {
+  display: flex;
+  color: black;
+  margin-top: 30px;
+}
+
+.shop-title {
   color: rgb(238, 231, 231);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
   padding: 0.5rem 3rem;
-  background-color: rgb(229, 72, 187);
+  background-color: goldenrod;
   border-radius: 75px;
-}
-
-.product-title-container {
-  display: flex;
-  margin-top: 30px;
-  margin-left: -80%;
+  margin: 0 auto;
 }
 
 .main {

@@ -4,16 +4,6 @@
   padding-bottom: 1.5rem;
 }
 
-.item {
-  /* display: flex;
-  width: 50rem;
-  height: auto;
-  background-color: rgb(2, 77, 77);
-  color: rgb(245, 245, 115);
-  border-radius: 12px;
-  justify-content: space-evenly; */
-}
-
 .item-price {
   display: flex;
   gap: 15px;

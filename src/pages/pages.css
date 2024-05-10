@@ -116,6 +116,7 @@ hr {
 .cart-page {
   overflow: hidden;
   margin-top: 88px;
+  position: static;
 }
 
 .cart-items-title {
@@ -180,4 +181,105 @@ hr {
   justify-content: center;
 }
 
+.btn-checkout {
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  color: white;
+  background-color: goldenrod;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.btn-checkout:hover {
+  cursor: pointer;
+  background-color: rgb(117, 87, 12);
+}
+
+.process {
+  position: relative;
+  bottom: 150px;
+  display: flex;
+
+  background-color: rgb(47, 255, 50);
+  color: whitesmoke;
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .faq-section {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .faq-question,
+  .faq-answer-body {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .faq-body-content hr {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .cart-items-title {
+    padding: 0rem 1rem; /* Adjust padding for smaller screens */
+    font-size: 10px; /* Adjust font size for smaller screens */
+    grid-template-columns: 1fr 1fr 1fr; /* Adjust grid columns for smaller screens */
+  }
+
+  .cart-items-title img {
+    width: 50px; /* Adjust image size for smaller screens */
+    height: 50px; /* Adjust image size for smaller screens */
+  }
+
+  .cart-amt {
+    margin-top: 30px; /* Adjust margin for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .faq-question,
+  .faq-answer-body {
+    width: 95%; /* Adjust width for even smaller screens */
+  }
+
+  .faq-body-content hr {
+    width: 95%; /* Adjust width for even smaller screens */
+  }
+
+  .cart-items-title {
+    padding: 0rem 0.5rem; /* Adjust padding for even smaller screens */
+    font-size: 8px; /* Adjust font size for even smaller screens */
+    grid-template-columns: 1fr; /* Adjust grid columns for even smaller screens */
+  }
+
+  .cart-items-title img {
+    width: 40px; /* Adjust image size for even smaller screens */
+    height: 40px; /* Adjust image size for even smaller screens */
+  }
+
+  .cart-amt {
+    margin-top: 20px; /* Adjust margin for even smaller screens */
+    font-size: 12px; /* Adjust font size for even smaller screens */
+  }
+}

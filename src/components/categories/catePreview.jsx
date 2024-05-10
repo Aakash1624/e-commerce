@@ -5,6 +5,7 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 import './category.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Cart from '../../pages/cart';
+import './category.css';
 
 const CatPreview = ({ cart, setCart, product, cartLength }) => {
   let navigate = useNavigate();
@@ -45,7 +46,7 @@ const CatPreview = ({ cart, setCart, product, cartLength }) => {
       {filteredProducts.map((product) => (
         <div className="popular-container" key={product.names}>
           <div className="product-title-container">
-            <h3 className="title">
+            <h3 className="shop-title">
               {product.names}
               <FaLongArrowAltRight />
             </h3>
@@ -80,7 +81,7 @@ const CatPreview = ({ cart, setCart, product, cartLength }) => {
           <hr />
         </div>
       ))}
-      <Cart cart={cart} />
+      {/* <Cart cart={cart} /> */}
     </div>
   );
 };
