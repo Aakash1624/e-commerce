@@ -38,7 +38,9 @@
 }
 
 .product-hr {
-  width: 80%;
+    margin: 0 auto;
+
+  max-width: 80%;
   max-width: 300px; /* Adjusted max-width for smaller screens */
   height: 1px;
   border-radius: 10px;
@@ -100,6 +102,15 @@
   .image {
     max-width: 100%; /* Adjusted max-width for smaller screens */
     height: auto;
+  }
+
+  .product-hr {
+    margin: 0 auto;
+    min-width: 80%;
+    max-width: 300px; /* Adjusted max-width for smaller screens */
+    height: 1px;
+    border-radius: 10px;
+    background-color: #252525;
   }
 
   .product-title-container {
