@@ -2,9 +2,9 @@ import { React, useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
 import { CiSquarePlus } from 'react-icons/ci';
 import { CiSquareMinus } from 'react-icons/ci';
-import MyComponent from '../components/categories/popup';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './pages.css';
 
 const Cart = ({ cart, setCart }) => {
   const notify = () => {

@@ -5,7 +5,6 @@ import categories_data from '../../constants/products';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import './category.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import MyComponent from './popup';
 
 const CatPreview = ({ cart, setCart, product, cartLength }) => {
   const notify = () => {

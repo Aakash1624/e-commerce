@@ -6,8 +6,14 @@ const Home = () => {
   return (
     <>
       <div>
-        <Carousel className='carousel'>
-          <div >
+        <Carousel
+          className="carousel"
+          autoPlay={true}
+          interval={3000}
+          infiniteLoop={true}
+          showThumbs={false}
+        >
+          <div>
             <img src="https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/banner-images/homepgae-banner-copy.jpg?format=webp&w=1500&dpr=1.3" />
           </div>
           <div>

@@ -8,15 +8,17 @@
   overflow: hidden;
   margin-top: 30px;
 }
+
 .product-items {
-  width: 100vw;
+  width: 100%;
   margin-top: 30px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 20px; /* Adjusted gap for smaller screens */
 }
+
 .title-container {
   font-size: 24px;
 }
@@ -25,31 +27,28 @@
   color: black;
   font-size: 2rem;
   font-weight: 600;
-  display: flex;
-  left: 0px;
 }
 
 .popular-hr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 80%;
+  max-width: 300px; /* Adjusted max-width for smaller screens */
   height: 2px;
   border-radius: 10px;
   background-color: #252525;
 }
 
 .product-hr {
-  margin: 0 auto;
   width: 80%;
+  max-width: 300px; /* Adjusted max-width for smaller screens */
   height: 1px;
   border-radius: 10px;
   background-color: #252525;
 }
 
 .image {
-  width: 350px;
-  height: 450px;
+  width: 100%; /* Adjusted image width for smaller screens */
+  max-width: 350px; /* Limit image width on smaller screens */
+  height: auto;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
 }
@@ -58,6 +57,7 @@
   display: flex;
   color: black;
   margin-top: 30px;
+  justify-content: center; /* Center title container on smaller screens */
 }
 
 .shop-title {
@@ -66,7 +66,7 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 2rem; /* Adjusted padding for smaller screens */
   background-color: goldenrod;
   border-radius: 75px;
   margin: 0 auto;
@@ -79,7 +79,8 @@
 }
 
 .content-container {
-  width: 350px;
+  width: 100%; /* Make content container full width on smaller screens */
+  max-width: 350px; /* Limit content container width on smaller screens */
   display: flex;
   flex-direction: column;
   margin-left: 8px;
@@ -88,7 +89,26 @@
 .product-item:hover {
   transform: scale(1.04);
   transition: 0.5s;
-  .product-title {
-    color: rgb(252, 5, 5);
+}
+
+.product-title {
+  color: rgb(252, 5, 5); /* Changed color of product title on hover */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .image {
+    max-width: 100%; /* Adjusted max-width for smaller screens */
+    height: auto;
+  }
+
+  .product-title-container {
+    flex-direction: column; /* Adjusted flex-direction for smaller screens */
+    align-items: center; /* Centered items on smaller screens */
+    margin-top: 20px; /* Adjusted margin-top for smaller screens */
+  }
+
+  .shop-title {
+    padding: 0.5rem 1rem; /* Adjusted padding for smaller screens */
   }
 }
