@@ -211,3 +211,54 @@ body {
     font-size: 0.9rem; /* Adjusted font size */
   }
 }
+
+/* Media query for 320px width */
+@media screen and (max-width: 320px) {
+  .login-container {
+    width: 100%; /* Adjusted width for smaller screens */
+    padding: 0 10px; /* Adjusted padding */
+    margin-top: 20px; /* Adjusted margin */
+  }
+
+  .text {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+
+  .underLine {
+    width: 30px; /* Adjusted width */
+  }
+
+  .input {
+    width: 100%; /* Adjusted width */
+  }
+
+  .login-page-icon {
+    font-size: 16px; /* Adjusted font size */
+    margin: 0px 20px; /* Adjusted margin */
+  }
+
+  .input input {
+    width: calc(100% - 80px); /* Adjusted input width */
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+
+  .forgot-password {
+    font-size: 0.8rem; /* Adjusted font size */
+    padding-left: 50px; /* Adjusted padding */
+    margin-top: 20px; /* Adjusted margin */
+  }
+
+  .submit {
+    width: 160px; /* Adjusted width */
+    height: 40px; /* Adjusted height */
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+
+  .btn-sign {
+    font-size: 0.8rem; /* Adjusted font size */
+    width: 180px; /* Adjusted width */
+    height: 35px; /* Adjusted height */
+    gap: 5px; /* Adjusted gap */
+  }
+}
+

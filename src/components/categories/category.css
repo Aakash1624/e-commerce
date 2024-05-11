@@ -190,4 +190,89 @@
     max-width: 100vw; /* Adjust max-width for smaller screens */
     overflow: hidden;
   }
+
+  .cat-product-items {
+    justify-content: center;
+    gap: 2rem; /* Reduce the gap between product items */
+  }
+
+  .cat-product-items img {
+    width: 14rem; /* Adjust image width */
+    height: 14rem; /* Adjust image height */
+  }
+
+  .product-item {
+    max-width: 14rem; /* Adjust max-width for product items */
+    margin-bottom: 20px; /* Increase margin between product items */
+  }
+
+  .main-product {
+    width: 14rem; /* Adjust width for main product */
+  }
+
+  .product-item img {
+    width: 13rem; /* Adjust image width */
+    height: 12rem; /* Adjust image height */
+  }
+
+  .item-price {
+    font-size: 14px; /* Adjust font size for item price */
+  }
+
+  .btn-addCart {
+    width: 14rem; /* Adjust width for add to cart button */
+    font-size: 14px; /* Adjust font size for add to cart button */
+  }
+
+  .shop-title {
+    padding: 0.5rem 1rem; /* Adjust padding for shop title */
+  }
+
+  .popup {
+    width: 90%; /* Adjust width for popup */
+    padding: 10px; /* Adjust padding for popup */
+  }
+
+  .popup p {
+    font-size: 14px; /* Adjust font size for popup text */
+  }
 }
+
+/* Media query for 320px width */
+@media screen and (max-width: 320px) {
+  .cat-product-items img {
+    width: 12rem; /* Further reduce image width */
+    height: 12rem; /* Further reduce image height */
+  }
+
+  .product-item {
+    max-width: 12rem; /* Further reduce max-width for product items */
+  }
+
+  .main-product {
+    width: 12rem; /* Further reduce width for main product */
+  }
+
+  .product-item img {
+    width: 11rem; /* Further reduce image width */
+    height: 10rem; /* Further reduce image height */
+  }
+
+  .item-price {
+    font-size: 12px; /* Further reduce font size for item price */
+  }
+
+  .btn-addCart {
+    width: 12rem; /* Further reduce width for add to cart button */
+    font-size: 12px; /* Further reduce font size for add to cart button */
+  }
+
+  .shop-title {
+    padding: 0.5rem 0.75rem; /* Further reduce padding for shop title */
+  }
+
+  .popup p {
+    font-size: 12px; /* Further reduce font size for popup text */
+  }
+}
+

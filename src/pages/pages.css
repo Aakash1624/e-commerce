@@ -237,6 +237,10 @@ hr {
   cursor: pointer;
 }
 
+.carousel {
+  margin-top: 70px;
+}
+
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
   .cart-items hr {
@@ -257,6 +261,66 @@ hr {
 
   .cart-amt {
     font-size: 0.9rem; /* Adjusted font size */
+    width: 12rem; /* Adjusted width */
+  }
+
+  .btn-checkout {
+    width: 7rem; /* Adjusted width */
+    height: 2.5rem; /* Adjusted height */
+    font-size: 0.8rem; /* Adjusted font size */
+  }
+}
+
+/* Media query for 320px width */
+@media screen and (max-width: 320px) {
+  .contact-title {
+    margin-top: 40px; /* Adjusted margin top */
+  }
+
+  .faq-section,
+  .faq-body-content,
+  .faq-item,
+  .faq-question {
+    width: 100%; /* Adjusted width for smaller screens */
+    padding: 0 10px; /* Adjusted padding */
+  }
+
+  .faq-body-content {
+    padding-left: 0; /* Removed left padding */
+  }
+
+  .faq-question {
+    font-size: 14px; /* Adjusted font size */
+    width: 100%; /* Adjusted width for smaller screens */
+  }
+
+  .faq-answer-body {
+    width: 100%; /* Adjusted width for smaller screens */
+  }
+
+  .social-contact {
+    flex-direction: column; /* Adjusted flex direction */
+    gap: 10px; /* Adjusted gap */
+  }
+
+  .social-icon {
+    width: 2rem; /* Adjusted width */
+    height: 2rem; /* Adjusted height */
+  }
+
+  .order {
+    width: 130px; /* Adjusted width */
+    height: 30px; /* Adjusted height */
+    font-size: 16px; /* Adjusted font size */
+  }
+
+  .cart-items-title {
+    padding: 0 5px; /* Adjusted padding */
+    font-size: 0.8rem; /* Adjusted font size */
+  }
+
+  .cart-amt {
+    font-size: 0.8rem; /* Adjusted font size */
     width: 12rem; /* Adjusted width */
   }
 

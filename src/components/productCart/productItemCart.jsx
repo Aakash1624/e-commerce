@@ -6,7 +6,7 @@ import Cart from '../../pages/cart'; // Import the Cart component
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Product = ({ cart, setCart, product }) => {
+const Product = ({ cart, setCart }) => {
   const notify = () => {
     toast.success('Product Added to the Cart !', {
       style: { color: 'white', background: '#09f04a', marginTop: '100px' },
@@ -14,11 +14,11 @@ const Product = ({ cart, setCart, product }) => {
   };
 
   // Function to add a product to the cart
-  const addToCart = (product) => {
+  const addToCart = (products) => {
     notify();
     // Check if the product already exists in the cart
     const existingProductIndex = cart.findIndex(
-      (item) => item.id === product.id
+      (item) => item.id === products.id
     );
     if (existingProductIndex !== -1) {
       // Product already exists in the cart, update its quantity
@@ -28,12 +28,12 @@ const Product = ({ cart, setCart, product }) => {
       setCart(updatedCart);
     } else {
       // Product doesn't exist in the cart, add it
-      const updatedCart = [...cart, { ...product, quantity: 1 }];
+      const updatedCart = [...cart, { ...products, quantity: 1 }];
       // Update the cart state with the new array
       setCart(updatedCart);
     }
     // Log the added product
-    console.log('Product added to cart:', product);
+    console.log('Product added to cart:', products);
   };
 
   return (
@@ -51,33 +51,33 @@ const Product = ({ cart, setCart, product }) => {
               </h3>
             </div>
             <div className="product-items">
-              {category.products.map((product, id) => {
-                return (
-                  <main className="main" key={id}>
-                    <div className="product-item">
-                      <div>
-                        <img src={product.image} alt="" className="image" />
+              {category.products &&
+                category.products.map((products) => {
+                  return (
+                    <main className="main" key={products.id}>
+                      <div className="product-item">
+                        <div>
+                          <img src={products.image} alt="" className="image" />
+                        </div>
+                        <div className="content-container">
+                          <h3 className="product-title">{products.names}</h3>
+                          <p>{products.description}</p>
+                          <p className="item-price">₹{products.price}</p>
+                        </div>
                       </div>
-                      <div className="content-container">
-                        <h3 className="product-title">{product.names}</h3>
-                        <p>{product.description}</p>
-                        <p className="item-price">₹{product.price}</p>
+                      <div className="addCart-container">
+                        <button
+                          className="btn-addCart"
+                          onClick={() => {
+                            addToCart(products);
+                          }}
+                        >
+                          Add to Cart
+                        </button>
                       </div>
-                    </div>
-                    <div className="addCart-container">
-                      {/* Pass the product to the addToCart function */}
-                      <button
-                        className="btn-addCart"
-                        onClick={() => {
-                          addToCart(product);
-                        }}
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
-                  </main>
-                );
-              })}
+                    </main>
+                  );
+                })}
             </div>
             <br />
             <hr className="product-hr" />

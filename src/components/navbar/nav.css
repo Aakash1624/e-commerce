@@ -65,7 +65,11 @@ li {
   align-items: center;
   box-shadow: var(--clr-light-shadow);
   background-color: #cc1006;
-  /* position: fixed; */
+  position: fixed; /* Add this line */
+  top: 0; /* Add this line to stick it to the top */
+  width: 100%; /* Add this line to make it full width */
+  z-index: 1000;
+  transition: top 3s ease;
 }
 
 /* Styling for search container */
@@ -204,5 +208,20 @@ li {
 
   .btn-login {
     font-size: 18px;
+  }
+}
+
+/* Media query for 320px width */
+@media screen and (max-width: 320px) {
+  .nav-container {
+    padding: 5px;
+  }
+
+  .search-container {
+    max-width: 250px;
+  }
+
+  .btn-login {
+    font-size: 16px;
   }
 }
