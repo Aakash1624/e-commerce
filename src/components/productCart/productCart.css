@@ -17,7 +17,7 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Adjusted gap for smaller screens */
+  gap: 20px; 
 }
 
 .title-container {
@@ -40,7 +40,6 @@
 
 .product-hr {
   margin: 0 auto;
-
   max-width: 80%;
   max-width: 300px; /* Adjusted max-width for smaller screens */
   height: 1px;
@@ -82,8 +81,8 @@
 }
 
 .content-container {
-  width: 100%; /* Make content container full width on smaller screens */
-  max-width: 350px; /* Limit content container width on smaller screens */
+  /* width: 100%;  */
+  max-width: 350px; 
   display: flex;
   flex-direction: column;
   margin-left: 8px;
@@ -123,6 +122,16 @@
   .shop-title {
     padding: 0.5rem 1rem; /* Adjusted padding for smaller screens */
   }
+
+  .product-items {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; 
+}
 }
 
 /* Media query for 320px width */

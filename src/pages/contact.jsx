@@ -15,10 +15,12 @@ const Contact = () => {
       <span className="contact-title">
         <b>Manage Your Orders Easily</b>
       </span>
-      <span>Track, Return/ Exchange or Cancel your orders hassle-free.</span>
+      <span className="contact-title">
+        Track, Return/ Exchange or Cancel your orders hassle-free.
+      </span>
       <br />
       <Link to="/myOrder" className="link">
-        <button className='order'>my order</button>
+        <button className="order">my order</button>
       </Link>
       <div className="contact-content">
         <h1>
@@ -48,7 +50,7 @@ const Contact = () => {
         })}
       </div>
       <div className="stay-touch">
-        <h1 className="footer-title">Stay in touch</h1>
+        <h1 className="contact-footer-title">Stay in touch</h1>
         <div className="social-contact">
           <a href="https://wa.me/6383017428" target="_blank">
             <img

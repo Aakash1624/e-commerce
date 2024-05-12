@@ -133,7 +133,7 @@ li {
 .cart-count {
   display: inline-block;
   position: relative;
-  bottom: 18px;
+  bottom: 25px;
   left: -10px;
   width: 25px;
   height: 25px;
@@ -176,23 +176,14 @@ li {
 
 /* Media query for responsiveness */
 @media screen and (max-width: 768px) {
+  .logo {
+    width: 68px;
+    height: 68px;
+  }
+
   .nav-container {
     flex-direction: column;
     height: auto;
-    padding: 10px;
-  }
-
-  .search-container {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .search {
-    width: 100%;
-  }
-
-  .search-icons {
-    display: none;
   }
 
   .profile {
@@ -203,25 +194,58 @@ li {
 
   .nav-menu-1 {
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
   }
 
   .btn-login {
-    font-size: 18px;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .cart {
+    margin-left: 20px;
+    font-size: 2rem;
+  }
+
+  .link {
+    font-size: 16px;
   }
 }
 
 /* Media query for 320px width */
 @media screen and (max-width: 320px) {
+  .logo {
+    width: 68px;
+    height: 68px;
+  }
+
   .nav-container {
     padding: 5px;
   }
 
-  .search-container {
-    max-width: 250px;
+  .nav-menu-1 {
+    flex-direction: column;
+    gap: 5px;
   }
 
   .btn-login {
-    font-size: 16px;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .cart {
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: 1.5rem;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  .cart-count {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
   }
 }
