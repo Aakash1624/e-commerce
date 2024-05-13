@@ -20,6 +20,7 @@ body {
   margin-top: 50px;
   background-color: #dfdada;
   border-radius: 38px;
+  overflow: hidden;
 }
 
 .header {
@@ -184,15 +185,23 @@ body {
 /* Media query for responsiveness */
 @media screen and (max-width: 768px) {
   .login-container {
-    max-width: 90%; /* Adjusted max-width */
+    width: 500px;
+    height: 600px;
+    margin-top: 270px;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+  }
+
+  .input {
+    width: 420px;
   }
 
   .text {
-    font-size: 1.5rem; /* Adjusted font size */
+    font-size: 1rem; /* Adjusted font size */
   }
 
   .underLine {
-    width: 40px; /* Adjusted width */
+    width: 20px; /* Adjusted width */
   }
 
   .input input {
@@ -215,9 +224,9 @@ body {
 /* Media query for 320px width */
 @media screen and (max-width: 320px) {
   .login-container {
-    width: 100%; /* Adjusted width for smaller screens */
-    padding: 0 10px; /* Adjusted padding */
-    margin-top: 20px; /* Adjusted margin */
+    margin-top: 270px;
+    margin-bottom: 50px;
+    max-width: 90%; /* Adjusted max-width */
   }
 
   .text {
@@ -261,4 +270,3 @@ body {
     gap: 5px; /* Adjusted gap */
   }
 }
-
