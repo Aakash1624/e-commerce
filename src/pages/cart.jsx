@@ -130,7 +130,7 @@ const Cart = ({ cart, setCart }) => {
           </>
         )}
       </div>
-      {cart.length > 0 && <Footer />}
+      {cart.length > 0}
     </>
   );
 };
